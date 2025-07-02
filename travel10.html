@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makandawa Trekking | Kithulgala Water Adventures</title>
+    <meta name="description"
+        content="Experience guided jungle trekking through Makandawa Rainforest in Kithulgala. Discover waterfalls, wildlife, and pristine nature with expert guides in Sri Lanka's beautiful rainforest.">
+    <meta name="keywords"
+        content="Makandawa trekking, Kithulgala jungle trek, rainforest hiking Sri Lanka, nature tours, Kelani River trekking">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://example.com/images/favicon.ico" type="image/x-icon">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="chatbot.js"></script>
+    <link rel="stylesheet" href="travel_css.css">
+    <style>
+        :root {
+            --primary: #0A1A4A;
+            --secondary: #C19A6B;
+            --accent: #E8C39E;
+            --dark: #050A1E;
+            --light: #F8F5F0;
+            --gold: #D4AF37;
+            --success: #28a745;
+            --danger: #dc3545;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: var(--light);
+            padding-top: 80px;
+            line-height: 1.6;
+        }
+
+        /* Video Background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .video-background video {
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            opacity: 0.15;
+        }
+
+       
+
+        /* Booking Steps */
+        .booking-steps {
+            background-color: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(193, 154, 107, 0.2);
+        }
+
+        .step-icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .step-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            flex: 1;
+        }
+
+        .step-icon.active .icon-container {
+            background-color: var(--gold);
+            color: var(--primary);
+            box-shadow: 0 0 0 5px rgba(212, 175, 55, 0.2);
+        }
+
+        .step-icon.completed .icon-container {
+            background-color: var(--success);
+            color: white;
+        }
+
+        .icon-container {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(10, 26, 74, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .step-line {
+            flex-grow: 1;
+            height: 2px;
+            background-color: rgba(10, 26, 74, 0.2);
+            margin: 0 1rem;
+            position: relative;
+            top: -15px;
+        }
+
+        .step-line.active {
+            background-color: var(--gold);
+        }
+
+        .step-line.completed {
+            background-color: var(--success);
+        }
+
+        .step-title {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .step-icon.completed .step-title {
+            color: var(--success);
+        }
+
+        /* Main Content */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .package-container {
+            background-color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            border: 1px solid rgba(193, 154, 107, 0.3);
+        }
+
+        .carousel-item img {
+            height: 450px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .carousel-caption {
+            background: rgba(5, 10, 30, 0.7);
+            border-radius: 8px;
+            padding: 1.5rem;
+            bottom: 30px;
+            left: 30px;
+            right: auto;
+            width: auto;
+            text-align: left;
+            max-width: 500px;
+        }
+
+        .carousel-caption h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-caption p {
+            font-size: 1rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+        }
+
+        .carousel-indicators button.active {
+            background-color: var(--gold);
+        }
+
+        .package-details {
+            padding: 2.5rem;
+        }
+
+        .package-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            font-weight: 700;
+        }
+
+        .package-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .package-description {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        .package-highlights {
+            background-color: rgba(248, 245, 240, 0.5);
+            border-left: 4px solid var(--gold);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .package-highlights h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .package-highlights ul {
+            padding-left: 1.5rem;
+        }
+
+        .package-highlights li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .package-highlights li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--gold);
+            position: absolute;
+            left: -1.5rem;
+        }
+
+        .included-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .feature-item {
+            flex: 1 1 200px;
+            display: flex;
+            align-items: center;
+            background-color: rgba(10, 26, 74, 0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--gold);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-right: 1rem;
+            min-width: 30px;
+        }
+
+        .feature-text {
+            font-size: 0.9rem;
+        }
+
+        .feature-text strong {
+            display: block;
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .safety-section {
+            background-color: rgba(220, 53, 69, 0.05);
+            border-left: 4px solid var(--danger);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .safety-section h4 {
+            color: var(--danger);
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+        }
+
+        .testimonials {
+            margin: 3rem 0;
+        }
+
+        .testimonial-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.5rem;
+            border-top: 3px solid var(--gold);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .testimonial-text::before {
+            content: '\f10d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: rgba(193, 154, 107, 0.3);
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            font-size: 3rem;
+            z-index: 0;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+            border: 2px solid var(--gold);
+        }
+
+        .author-info strong {
+            display: block;
+            color: var(--primary);
+        }
+
+        .author-info span {
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        .booking-form-container {
+            position: sticky;
+            top: 100px;
+        }
+
+        .booking-form {
+            background-color: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(193, 154, 107, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        .form-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .form-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .price-display {
+            font-size: 1.5rem;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .price-display small {
+            font-size: 1rem;
+            color: #777;
+            margin-left: 0.5rem;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-label i {
+            margin-right: 0.5rem;
+            color: var(--gold);
+        }
+
+        .form-control {
+            border: 1px solid rgba(10, 26, 74, 0.2);
+            border-radius: 8px;
+            padding: 0.8rem 1rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 0.25rem rgba(193, 154, 107, 0.25);
+        }
+
+        .input-group-text {
+            background-color: rgba(10, 26, 74, 0.05);
+            border-color: rgba(10, 26, 74, 0.2);
+            color: var(--primary);
+        }
+
+        .traveler-count {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            background-color: rgba(10, 26, 74, 0.03);
+            padding: 0.8rem;
+            border-radius: 8px;
+        }
+
+        .traveler-count label {
+            flex: 1;
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        .traveler-input {
+            width: 80px;
+            text-align: center;
+            background-color: white;
+        }
+
+        .total-travelers {
+            font-weight: 600;
+            color: var(--primary);
+            margin: 1.5rem 0;
+            padding: 1rem 0;
+            border-top: 1px solid rgba(10, 26, 74, 0.1);
+            border-bottom: 1px solid rgba(10, 26, 74, 0.1);
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .total-price {
+            color: var(--gold);
+        }
+
+        .btn-add-to-cart {
+            background: linear-gradient(135deg, var(--gold), #B3895B);
+            border: none;
+            border-radius: 8px;
+            padding: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            width: 100%;
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-add-to-cart:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(193, 154, 107, 0.4);
+        }
+
+        .btn-clear {
+            background: rgba(10, 26, 74, 0.05);
+            border: 1px solid rgba(10, 26, 74, 0.1);
+            border-radius: 8px;
+            padding: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            width: 100%;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-clear:hover {
+            background: rgba(10, 26, 74, 0.1);
+        }
+
+        .availability-badge {
+            display: inline-block;
+            background-color: var(--success);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 1rem;
+        }
+
+        .guarantee-badge {
+            display: flex;
+            align-items: center;
+            background-color: rgba(40, 167, 69, 0.1);
+            border: 1px solid var(--success);
+            color: var(--success);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .guarantee-badge i {
+            margin-right: 0.5rem;
+        }
+
+        /* Price List Section */
+        .price {
+            margin-left: 8px;
+            /* or any spacing you prefer */
+        }
+
+        .price-list-section {
+            background-color: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(193, 154, 107, 0.3);
+            margin: 2rem 0;
+        }
+
+        .price-list-section h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .price-list-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+
+        .price-table th {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem;
+            text-align: left;
+        }
+
+        .price-table td {
+            padding: 0.8rem;
+            border-bottom: 1px solid rgba(10, 26, 74, 0.1);
+        }
+
+        .price-table tr:nth-child(even) {
+            background-color: rgba(10, 26, 74, 0.03);
+        }
+
+        .price-table tr:hover {
+            background-color: rgba(10, 26, 74, 0.05);
+        }
+
+        .price-currency {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* Why Choose Us */
+        .why-choose-us {
+            background-color: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(193, 154, 107, 0.3);
+        }
+
+        .why-choose-us h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .why-choose-us h4::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin: 3rem 0;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            background-color: rgba(10, 26, 74, 0.05);
+            padding: 1rem 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: rgba(10, 26, 74, 0.1);
+        }
+
+        .faq-question::after {
+            content: '\f078';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.collapsed::after {
+            transform: rotate(-90deg);
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            background-color: white;
+            border-top: 1px solid rgba(10, 26, 74, 0.05);
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(to bottom, var(--primary), var(--dark));
+            color: white;
+            padding: 4rem 0 2rem;
+            position: relative;
+            margin-top: 3rem;
+            border-top: 2px solid var(--gold);
+            z-index: 900;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .footer-logo {
+            width: 80px;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+        }
+
+        .footer h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            position: relative;
+            color: var(--accent);
+            letter-spacing: 0.5px;
+        }
+
+        .footer h5::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer ul li a:hover {
+            color: var(--accent);
+            transform: translateX(5px);
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            color: white;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-icons a:hover {
+            background: var(--gold);
+            color: var(--primary);
+            transform: translateY(-3px);
+            border-color: var(--gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(193, 154, 107, 0.2);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--gold);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1199px) {
+            .carousel-item img {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .carousel-item img {
+                height: 350px;
+            }
+
+            .package-details {
+                padding: 1.5rem;
+            }
+
+            .booking-form-container {
+                position: static;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .step-icons {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .step-icon {
+                width: 25%;
+                margin-bottom: 1.5rem;
+            }
+
+            .step-line {
+                display: none;
+            }
+
+            .carousel-item img {
+                height: 300px;
+            }
+
+            .carousel-caption {
+                bottom: 15px;
+                left: 15px;
+                padding: 1rem;
+            }
+
+            .carousel-caption h3 {
+                font-size: 1.3rem;
+            }
+
+            .package-title {
+                font-size: 1.8rem;
+            }
+
+            .feature-item {
+                flex: 1 1 100%;
+            }
+
+            .price-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .carousel-item img {
+                height: 250px;
+            }
+
+            .package-title {
+                font-size: 1.5rem;
+            }
+
+            .step-icon {
+                width: 50%;
+            }
+
+            .form-title {
+                font-size: 1.5rem;
+            }
+
+            .price-display {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="https://example.com/videos/trekking-jungle.mp4" type="video/mp4">
+        </video>
+    </div>
+ <!-- Navigation -->
+   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" alt="Kithulgala Water Rafting Logo" style="height: 50px;margin-left: -45px;">
+      </a>
+      <span  class="nav_topic" style="margin-left: -1px;">Kithulgala Water Rafting </span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="home page.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="home page.html #about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="activity.html">Activities</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Go Mart
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="shopping mart.html">All Products</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="shopping mart.html">Biscuits</a></li>
+              <li><a class="dropdown-item" href="shopping mart.html">Beverages</a></li>
+              <li><a class="dropdown-item" href="shopping mart.html">Bath Items</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="home page.html #contact">Contact</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn gold-outline rounded-pill px-4" href="cart.html">Book Now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+    <!-- Booking Steps -->
+    <div class="booking-steps">
+        <div class="step-icons">
+            <div class="step-icon active">
+                <div class="icon-container">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <span class="step-title">TRAVEL DATE</span>
+            </div>
+            <div class="step-line active"></div>
+            <div class="step-icon">
+                <div class="icon-container">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <span class="step-title">CART</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-icon">
+                <div class="icon-container">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <span class="step-title">BOOKING INFO</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-icon">
+                <div class="icon-container">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <span class="step-title">PAYMENT</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="row">
+            <!-- Package Details -->
+            <div class="col-lg-8">
+                <div class="package-container">
+                    <!-- Carousel -->
+                    <div id="packageCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Indicators/dots -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#packageCarousel" data-bs-slide-to="0"
+                                class="active"></button>
+                            <button type="button" data-bs-target="#packageCarousel" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#packageCarousel" data-bs-slide-to="2"></button>
+                        </div>
+
+                        <!-- The slideshow/carousel -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/maka11.png" alt="Makandawa Rainforest Trekking"
+                                    class="d-block w-100">
+                                <div class="carousel-caption">
+                                    <h3>Makandawa Rainforest Trek</h3>
+                                    <p>Explore pristine rainforest trails with expert naturalist guides</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/maka12.jpg" alt="Waterfall Discovery" class="d-block w-100">
+                                <div class="carousel-caption">
+                                    <h3>Hidden Waterfalls</h3>
+                                    <p>Discover secluded waterfalls perfect for a refreshing swim</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/maka222.jpg" alt="Wildlife Spotting" class="d-block w-100">
+                                <div class="carousel-caption">
+                                    <h3>Wildlife Encounters</h3>
+                                    <p>Spot endemic birds, monkeys, and other rainforest wildlife</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls/icons -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#packageCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#packageCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
+                    <div class="package-details">
+                        <h1 class="package-title">MAKANDAWA RAINFOREST TREK <span class="availability-badge">Available
+                                Now</span></h1>
+                        <p class="package-description">
+                            Immerse yourself in the breathtaking beauty of Makandawa Rainforest with our guided trekking
+                            experience. This journey takes you through lush jungle trails, past cascading waterfalls,
+                            and into the heart of one of Sri Lanka's most biodiverse ecosystems. Our knowledgeable
+                            guides will introduce you to the rainforest's flora and fauna while sharing insights about
+                            conservation and local ecology. Suitable for nature lovers of all fitness levels, this trek
+                            offers a perfect blend of adventure and environmental education.
+                        </p>
+
+                        <div class="package-highlights">
+                            <h4>Trekking Highlights</h4>
+                            <ul>
+                                <li>Guided trek through pristine Makandawa Rainforest</li>
+                                <li>Visit to secluded waterfalls with swimming opportunities</li>
+                                <li>Wildlife spotting including endemic birds and monkeys</li>
+                                <li>Interpretation of rainforest ecology by expert guides</li>
+                                <li>Multiple trail options for different fitness levels</li>
+                                <li>Small group sizes for personalized attention</li>
+                                <li>Traditional Sri Lankan packed lunch included</li>
+                            </ul>
+                        </div>
+
+                        <p class="package-description">
+                            Our Makandawa trek begins with a briefing at our base camp, where you'll receive an overview
+                            of the day's route and safety information. The trek progresses through varying terrain, from
+                            well-maintained paths to more adventurous jungle trails. Along the way, your guide will
+                            point out interesting plant species, animal tracks, and bird calls. The highlight for many
+                            is reaching one of the rainforest's hidden waterfalls, where you can cool off with a
+                            refreshing swim in crystal-clear pools. We provide a delicious packed lunch to enjoy in a
+                            scenic jungle clearing before completing the circuit back to base.
+                        </p>
+
+                        <p class="package-description">
+                            We offer different route options to suit various fitness levels, from gentle 2-hour walks to
+                            more challenging 5-hour treks. All routes are led by experienced guides who are trained in
+                            first aid and familiar with the rainforest's many trails. We provide basic trekking poles
+                            upon request and recommend sturdy footwear for the sometimes muddy and uneven terrain. This
+                            experience is perfect for families, solo travelers, and groups looking to connect with Sri
+                            Lanka's incredible natural heritage.
+                        </p>
+
+                        <!-- Price List Section -->
+                        <div class="price-list-section">
+                            <h4>Our Pricing</h4>
+                            <p>We offer competitive pricing for both local and foreign tourists. All prices include
+                                guide services, park fees, and packed lunch.</p>
+
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Short Trek (2-3 hrs)</th>
+                                        <th>Standard Trek (4-5 hrs)</th>
+                                        <th>Full Day Adventure</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Local Child (Age 8-12)</td>
+                                        <td><span class="price-currency">Rs</span> 3,500</td>
+                                        <td><span class="price-currency">Rs</span> 5,000</td>
+                                        <td><span class="price-currency">Rs</span> 7,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Local Adult (Age 13+)</td>
+                                        <td><span class="price-currency">Rs</span> 5,000</td>
+                                        <td><span class="price-currency">Rs</span> 7,500</td>
+                                        <td><span class="price-currency">Rs</span> 10,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Foreign Child (Age 8-12)</td>
+                                        <td><span class="price-currency">$</span> 25</td>
+                                        <td><span class="price-currency">$</span> 35</td>
+                                        <td><span class="price-currency">$</span> 50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Foreign Adult (Age 13+)</td>
+                                        <td><span class="price-currency">$</span> 35</td>
+                                        <td><span class="price-currency">$</span> 50</td>
+                                        <td><span class="price-currency">$</span> 70</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="mt-3">
+                                <p><strong>Notes:</strong></p>
+                                <ul>
+                                    <li>Local rates apply to Sri Lankan citizens and residents with valid ID</li>
+                                    <li>Children under 8 can join short trek for free (max 1 per adult)</li>
+                                    <li>Group discounts available for 6+ participants (15% off)</li>
+                                    <li>Prices include guide, park entrance fees, and packed lunch</li>
+                                    <li>Trekking poles available for Rs 500 / $5 extra</li>
+                                    <li>Private guide option available for Rs 3,000 / $30 extra</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="included-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <strong>Duration</strong>
+                                    <span>2-8 hours (depending on route)</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <strong>Group Size</strong>
+                                    <span>Max 8 per guide</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-mountain"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <strong>Difficulty</strong>
+                                    <span>Easy to Moderate</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <strong>Availability</strong>
+                                    <span>Year-round (best Nov-Apr)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="safety-section">
+                            <h4><i class="fas fa-shield-alt"></i> Safety Information</h4>
+                            <p>Your safety is our priority. Our guides carry first aid kits and are trained in
+                                wilderness first response. The trails are regularly maintained, but rainforest
+                                conditions can be unpredictable with occasional slippery or uneven surfaces. We monitor
+                                weather conditions and may modify routes if necessary. While wildlife encounters are
+                                generally safe, we maintain appropriate distances and your guide will advise on any
+                                precautions. Drinking water is provided, and we recommend bringing sun protection and
+                                insect repellent.
+                            </p>
+                        </div>
+
+                        <h3>What to Bring</h3>
+                        <ul>
+                            <li>Sturdy walking shoes or hiking boots</li>
+                            <li>Lightweight, breathable clothing (long sleeves/pants recommended)</li>
+                            <li>Rain jacket (during rainy season)</li>
+                            <li>Sun protection (hat, sunscreen)</li>
+                            <li>Insect repellent</li>
+                            <li>Swimwear and towel (for waterfall swims)</li>
+                            <li>Small backpack for personal items</li>
+                            <li>Camera/binoculars (optional)</li>
+                            <li>Reusable water bottle (we provide refills)</li>
+                        </ul>
+
+                        <div class="testimonials">
+                            <h3>What Our Trekkers Say</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-text">
+                                            "The Makandawa trek was the highlight of our Sri Lanka trip! Our guide was
+                                            incredibly knowledgeable about the rainforest ecology and spotted so many
+                                            birds and animals we would have missed. The waterfall swim was magical, and
+                                            the packed lunch was delicious. We did the standard trek which was
+                                            challenging enough to feel rewarding but manageable for our family with
+                                            teens. Highly recommend this authentic nature experience!"
+                                        </div>
+                                        <div class="testimonial-author">
+                                            <img src="images/2fe.jpg" alt="Emma S."
+                                                class="author-avatar">
+                                            <div class="author-info">
+                                                <strong>Emma S.</strong>
+                                                <span>Toronto, Canada</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-text">
+                                            "As a nature photographer, I was thrilled with the biodiversity in
+                                            Makandawa. Our guide knew all the best spots for birdwatching and was
+                                            patient while I set up shots. We saw giant squirrels, several endemic bird
+                                            species, and incredible butterflies. The short trek was perfect for getting
+                                            great photos without being too strenuous in the heat. The team even arranged
+                                            an early start for better lighting. Will definitely return for the full day
+                                            trek next visit!"
+                                        </div>
+                                        <div class="testimonial-author">
+                                            <img src="images/2ma.jpg" alt="Nimal P."
+                                                class="author-avatar">
+                                            <div class="author-info">
+                                                <strong>Nimal P.</strong>
+                                                <span>Colombo, Sri Lanka</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-section">
+                            <h3>Frequently Asked Questions</h3>
+                            <div class="accordion" id="faqAccordion">
+                                <div class="faq-item">
+                                    <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq1"
+                                        aria-expanded="false">
+                                        How difficult is the trekking?
+
+                                    </div>
+                                    <div id="faq1" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                                        We offer routes suitable for various fitness levels. The short trek (2-3 hours)
+                                        involves gentle terrain with few steep sections, suitable for most people
+                                        including families with children. The standard trek (4-5 hours) includes some
+                                        moderate climbs and uneven terrain. The full day adventure is more challenging
+                                        with longer distances and varied terrain. Our guides will help you choose the
+                                        most appropriate route based on your fitness level and interests.
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq2"
+                                        aria-expanded="false">
+                                        What wildlife might we see?
+
+                                    </div>
+                                    <div id="faq2" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                                        Makandawa is home to diverse wildlife including several endemic bird species
+                                        (like Sri Lanka grey hornbill and layard's parakeet), purple-faced langur
+                                        monkeys, giant squirrels, and various reptiles and amphibians. While we can't
+                                        guarantee sightings, our guides know the best spots and times for wildlife
+                                        viewing. Early morning treks typically offer the best wildlife viewing
+                                        opportunities.
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq3"
+                                        aria-expanded="false">
+                                        What happens if it rains?
+
+                                    </div>
+                                    <div id="faq3" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                                        Trekking in light rain can be a magical experience in the rainforest, and we
+                                        provide rain ponchos if needed. However, in case of heavy rain or thunderstorms,
+                                        we may delay the start time, modify the route, or reschedule for safety reasons.
+                                        You'll be informed of any changes, and we offer full refunds if rescheduling
+                                        isn't possible.
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq4"
+                                        aria-expanded="false">
+                                        Is this suitable for children?
+
+                                    </div>
+                                    <div id="faq4" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                                        Absolutely! The short trek is perfect for families with children aged 5+. Our
+                                        guides are experienced with families and know how to make the trek engaging for
+                                        young explorers. We can adjust the pace and include more breaks as needed.
+                                        Children under 8 can join the short trek for free when accompanied by an adult.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Form Column -->
+            <div class="col-lg-4">
+                <div class="booking-form-container">
+                    <div class="booking-form">
+                        <h3 class="form-title">BOOK YOUR TREK</h3>
+                        <div class="price-display">FROM <span class="price">Rs 3,500/$ 25</span> </div>
+
+                        <!-- Tourist Type -->
+                        <div class="mb-3">
+                            <label for="tourist-type" class="form-label"><i class="fas fa-passport"></i> Tourist
+                                Type:</label>
+                            <select id="tourist-type" class="form-select form-control" onchange="updatePrices()">
+                                <option value="local">Local (Sri Lankan)</option>
+                                <option value="foreign">Foreign Tourist</option>
+                            </select>
+                        </div>
+
+                        <!-- Travel Date -->
+                        <div class="mb-3">
+                            <label for="travel-date" class="form-label"><i class="fas fa-calendar-day"></i> Select
+                                Trekking
+                                Date:</label>
+                            <div class="input-group">
+                                <input type="date" id="travel-date" class="form-control" min="2024-01-01" required>
+                                <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- Trek Type -->
+                        <div class="mb-3">
+                            <label for="trek-type" class="form-label"><i class="fas fa-hiking"></i> Trek Type:</label>
+                            <select id="trek-type" class="form-select form-control" onchange="updatePrices()">
+                                <option value="short">Short Trek (2-3 hrs)</option>
+                                <option value="standard">Standard Trek (4-5 hrs)</option>
+                                <option value="full-day">Full Day Adventure</option>
+                            </select>
+                        </div>
+
+                        <!-- Travelers -->
+                        <div class="mb-3">
+                            <label class="form-label"><i class="fas fa-users"></i> Number of Travelers:</label>
+
+                            <div class="traveler-count">
+                                <label for="childCount">Child (age 8-12)</label>
+                                <input type="number" class="form-control traveler-input" id="childCount" min="0"
+                                    value="0" onchange="updateTotalTravelers()">
+                            </div>
+
+                            <div class="traveler-count">
+                                <label for="adultCount">Adult (age 13+)</label>
+                                <input type="number" class="form-control traveler-input" id="adultCount" min="0"
+                                    value="0" onchange="updateTotalTravelers()">
+                            </div>
+                        </div>
+
+                        <!-- Extras -->
+                        <div class="mb-3">
+                            <label class="form-label"><i class="fas fa-plus-circle"></i> Extras:</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="trekking-poles"
+                                    onchange="updatePrices()">
+                                <label class="form-check-label" for="trekking-poles">
+                                    Trekking Poles (Rs 500 / $5 each)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="private-guide"
+                                    onchange="updatePrices()">
+                                <label class="form-check-label" for="private-guide">
+                                    Private Guide (Rs 3,000 / $30)
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Total Travelers -->
+                        <div class="total-travelers">
+                            <span>Total Travelers:</span>
+                            <span id="totalTravelers">0</span>
+                        </div>
+
+                        <!-- Total Price -->
+                        <div class="total-travelers">
+                            <span>Estimated Total:</span>
+                            <span class="total-price" id="totalPrice">Rs 0</span>
+                        </div>
+
+                        <!-- Guarantee Badge -->
+                        <div class="guarantee-badge">
+                            <i class="fas fa-lock"></i>
+                            Secure Booking & Best Price Guarantee
+                        </div>
+
+                        <!-- Buttons -->
+                        <button class="btn-add-to-cart" onclick="addToCart()">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="btn-clear" onclick="clearForm()">
+                            <i class="fas fa-eraser"></i> Clear Selection
+                        </button>
+
+                        <!-- Quick Info -->
+                        <div class="mt-3">
+                            <p class="small text-muted"><i class="fas fa-info-circle text-primary"></i> Free
+                                cancellation up to 48
+                                hours before trekking date</p>
+                            <p class="small text-muted"><i class="fas fa-phone-alt text-primary"></i> Need help? Call
+                                +94 76 123 4567
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Why Choose Us -->
+                    <div class="why-choose-us mt-4">
+                        <h4>Why Choose Our Trekking</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Expert naturalist
+                                guides</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Small group sizes
+                            </li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Multiple route
+                                options</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Conservation-focused
+                                tours</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Delicious local meals
+                                included</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Best wildlife
+                                spotting locations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <img src="images/logo.png" alt="Logo" class="footer-logo">
+                    <p>Providing thrilling water adventures in Kithulgala since 2005. Safety and fun are our top
+                        priorities.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Activities</h5>
+                    <ul>
+                        <li><a href="kayaking.html">White Water Kayaking</a></li>
+                        <li><a href="rafting.html">White Water Rafting</a></li>
+                        <li><a href="canyoning.html">Canyoning</a></li>
+                        <li><a href="trekking.html">Jungle Trekking</a></li>
+                        <li><a href="camping.html">Camping</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Contact Us</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Kithulgala, Sri Lanka</li>
+                        <li><i class="fas fa-phone me-2"></i> +94 76 123 4567</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@kithulgalarafting.com</li>
+                    </ul>
+                    <div class="subscription-box mt-3">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-booking mt-2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kithulgala Water Adventures. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+  <!-- Add to Cart Modal -->
+    <div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 15px; overflow: hidden;">
+                <div class="modal-header" style="background-color: var(--primary); border-bottom: 2px solid var(--gold);">
+                    <h5 class="modal-title text-white" id="addToCartModalLabel">Add Adventure Essentials</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-shopping-basket" style="font-size: 3rem; color: var(--gold);"></i>
+                        <h4 class="mt-3" style="color: var(--primary);">Your Trekking Adventure is Added!</h4>
+                        <p class="text-muted">Would you like to add adventure essentials from our Go Mart?</p>
+                    </div>
+                    
+                    <div class="package-summary mb-4 p-3" style="background-color: rgba(10, 26, 74, 0.05); border-radius: 10px; border-left: 3px solid var(--gold);">
+                        <div class="d-flex align-items-center">
+                            <img src="images/maka11.png" alt="Makandawa Trekking" style="width: 80px; height: 60px; object-fit: cover; border-radius: 5px;">
+                            <div class="ms-3">
+                                <h6 style="color: var(--primary); margin-bottom: 0;">MAKANDAWA RAINFOREST TREK</h6>
+                                <small class="text-muted" id="modalPackageDetails">Standard Trek (4-5 hrs)</small>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <span>Total:</span>
+                            <strong id="modalPackagePrice">Rs 0</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border-top: none; background-color: #f8f9fa; border-radius: 0 0 15px 15px;">
+                    <button type="button" class="btn btn-outline-secondary" style="border-radius: 8px;" data-bs-dismiss="modal" id="continueToCheckout">
+                        Continue to Checkout
+                    </button>
+                    <button type="button" class="btn btn-booking" style="border-radius: 8px; background-color: var(--gold);" id="goToMart">
+                        <i class="fas fa-store me-2"></i> Visit Go Mart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Price structure for trekking
+        const prices = {
+            local: {
+                'short': { child: 3500, adult: 5000 },
+                'standard': { child: 5000, adult: 7500 },
+                'full-day': { child: 7000, adult: 10000 }
+            },
+            foreign: {
+                'short': { child: 25, adult: 35 },
+                'standard': { child: 35, adult: 50 },
+                'full-day': { child: 50, adult: 70 }
+            }
+        };
+
+       // Update prices based on selections
+        function updatePrices() {
+            updateTotalTravelers();
+        }
+
+        // Update total travelers and price
+        function updateTotalTravelers() {
+            const touristType = document.getElementById("tourist-type").value;
+            const trekType = document.getElementById("trek-type").value;
+            const childCount = parseInt(document.getElementById("childCount").value) || 0;
+            const adultCount = parseInt(document.getElementById("adultCount").value) || 0;
+            const trekkingPoles = document.getElementById("trekking-poles").checked;
+            const privateGuide = document.getElementById("private-guide").checked;
+            const total = childCount + adultCount;
+
+            // Calculate base price
+            let totalPrice = 0;
+
+            totalPrice += childCount * prices[touristType][trekType].child;
+            totalPrice += adultCount * prices[touristType][trekType].adult;
+
+            // Add extras
+            if (trekkingPoles) {
+                totalPrice += (touristType === 'local') ? 500 * total : 5 * total;
+            }
+            if (privateGuide) {
+                totalPrice += (touristType === 'local') ? 3000 : 30;
+            }
+
+            document.getElementById("totalTravelers").textContent = total;
+
+            // Display currency based on tourist type
+            if (touristType === 'local') {
+                document.getElementById("totalPrice").textContent = "Rs " + totalPrice.toLocaleString();
+            } else {
+                document.getElementById("totalPrice").textContent = "$" + totalPrice.toLocaleString();
+            }
+        }
+
+        // Clear form function
+        function clearForm() {
+            document.getElementById("travel-date").value = "";
+            document.getElementById("tourist-type").value = "local";
+            document.getElementById("trek-type").value = "short";
+            document.getElementById("childCount").value = "0";
+            document.getElementById("adultCount").value = "0";
+            document.getElementById("trekking-poles").checked = false;
+            document.getElementById("private-guide").checked = false;
+            updateTotalTravelers();
+        }
+        // Add to cart function
+        function addToCart() {
+            const date = document.getElementById("travel-date").value;
+            if (!date) {
+                alert("Please select a trekking date");
+                return;
+            }
+
+            const totalTravelers = parseInt(document.getElementById("totalTravelers").textContent);
+            if (totalTravelers === 0) {
+                alert("Please add at least one traveler");
+                return;
+            }
+
+            // Get package details
+            const touristType = document.getElementById("tourist-type").value;
+            const trekType = document.getElementById("trek-type").value;
+            const packageName = "MAKANDAWA RAINFOREST TREK";
+            const packageDescription = trekType === "short" ? "Short Trek (2-3 hrs)" : 
+                                     trekType === "standard" ? "Standard Trek (4-5 hrs)" : "Full Day Adventure";
+            const packagePrice = document.getElementById("totalPrice").textContent;
+            const packageImage = "images/maka11.png";
+            
+            // Save package to localStorage
+            const packageDetails = {
+                name: packageName,
+                description: packageDescription,
+                price: packagePrice,
+                image: packageImage,
+                date: date,
+                travelers: totalTravelers,
+                trekType: trekType,
+                touristType: touristType,
+                type: "trekking-package"
+            };
+            
+            localStorage.setItem('currentPackage', JSON.stringify(packageDetails));
+            
+            // Update modal content
+            document.getElementById("modalPackageDetails").textContent = packageDescription;
+            document.getElementById("modalPackagePrice").textContent = packagePrice;
+            
+            // Show modal
+            var modal = new bootstrap.Modal(document.getElementById('addToCartModal'));
+            modal.show();
+        }
+
+        // Initialize on page load
+        document.addEventListener("DOMContentLoaded", function () {
+            updateTotalTravelers();
+
+            // Set minimum date to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById("travel-date").min = today;
+
+            // Set up modal button events
+            document.getElementById("continueToCheckout").addEventListener('click', function() {
+                window.location.href = "cart.html";
+            });
+            
+            document.getElementById("goToMart").addEventListener('click', function() {
+                window.location.href = "shopping mart.html";
+            });
+
+            // Navbar scroll effect
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 50) {
+                    document.querySelector(".navbar").classList.add("scrolled");
+                } else {
+                    document.querySelector(".navbar").classList.remove("scrolled");
+                }
+            });
+        });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

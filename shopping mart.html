@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Go Mart | Kithulgala Water Rafting</title>
+  <meta name="description"
+    content="Shop for essentials at Kithulgala Water Rafting's Go Mart. Find snacks, drinks, and bath items for your adventure.">
+
+  <!-- Font Imports -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="shopping mart.css">
+
+</head>
+
+<body>
+  <!-- Loader -->
+  <div class="loader-container" id="loader">
+    <span class="loader"></span>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" alt="Kithulgala Water Rafting Logo" style="height: 50px;">
+      </a>
+      <span class="nav_topic">Kithulgala Water Rafting</span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home page.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="home page.html #about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="activity.html">Activities</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Go Mart
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="shopping mart.html">All Products</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="shopping mart.html">Biscuits</a></li>
+              <li><a class="dropdown-item" href="shopping mart.html">Beverages</a></li>
+              <li><a class="dropdown-item" href="shopping mart.html">Bath Items</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="home page.html #contact">Contact</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn gold-outline rounded-pill px-4" href="booking_info.html">Book Now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="mart-hero">
+    <div class="container">
+      <h1>Go Mart</h1>
+      <p>Shop for all your adventure essentials - snacks, drinks, and personal care items to make your rafting
+        experience even better</p>
+    </div>
+  </section>
+
+  <div class="search-background-wrapper">
+    <!-- Search and Filter Section -->
+    <section class="search-section">
+      <div class="container">
+        <div class="search-container">
+          <select class="form-select" id="categoryFilter">
+            <option selected value="all">All Categories</option>
+            <option value="Biscuits">Biscuits</option>
+            <option value="Cold Drinks">Cold Drinks</option>
+            <option value="Bath Items">Bath Items</option>
+          </select>
+
+          <select class="form-select" id="priceFilter">
+            <option selected value="all">Price Range</option>
+            <option value="low">Low to High</option>
+            <option value="high">High to Low</option>
+          </select>
+
+          <input type="text" id="searchInput" class="form-control" placeholder="Search products...">
+
+          <button class="btn search-btn" id="searchButton">
+            <i class="fas fa-search me-2"></i> Search
+          </button>
+
+          <div class="cart-icon-container" id="cartToggle">
+            <i class="fas fa-shopping-cart cart-icon"></i>
+            <span class="cart-count" id="cart-count">0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Products Section -->
+  <section class="products-section"
+    style="background-image: url('images/sea.jpg'); background-size: 2200px auto; background-repeat:repeat;">
+    <div class="container">
+      <h2 class="section-title"><b>OUR PRODUCTS</b></h2>
+
+      <!-- Biscuits Section -->
+      <section class="category-section" id="Biscuits">
+        <h3 class="category-title">Biscuits</h3>
+        <div class="item-grid">
+          <!-- Product 1 -->
+          <div class="product-card" data-category="Biscuits" data-price="450">
+            <div class="product-img-container">
+              <img src="images/b1.jpg" alt="Cream Cracker Biscuit" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Cream Cracker Biscuit</h3>
+              <p class="product-size">500g</p>
+              <p class="product-price">Rs 450.00</p>
+              <div class="product-actions">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card" data-category="Biscuits" data-price="450">
+            <div class="product-img-container">
+              <img src="images/b2.jpeg" alt="Munchee Onion Biscuit" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Munchee Onion Biscuit</h3>
+              <p class="product-size">400g</p>
+              <p class="product-price">Rs 450.00</p>
+              <div class="product-actions">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card" data-category="Biscuits" data-price="750">
+            <div class="product-img-container">
+              <img src="images/b3.jpg" alt="Munchee Krisco Biscuit" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Munchee Krisco Biscuit</h3>
+              <p class="product-size">400g</p>
+              <p class="product-price">Rs 750.00</p>
+              <div class="product-actions">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card" data-category="Biscuits" data-price="450">
+            <div class="product-img-container">
+              <img src="images/b5.jpg" alt="Munchee Chocolate Biscuit" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Munchee Chocolate Biscuit</h3>
+              <p class="product-size">500g</p>
+              <p class="product-price">Rs 450.00</p>
+              <div class="product-actions">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="product-card" data-category="Biscuits" data-price="350">
+            <div class="product-img-container">
+              <img src="images/b6.jpg" alt="Munchee Milk Short Biscuit" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Munchee Milk Short Biscuit</h3>
+              <p class="product-size">350g</p>
+              <p class="product-price">Rs 350.00</p>
+              <div class="product-actions">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="product-card" data-category="Biscuits" data-price="350">
+            <div class="product-img-container">
+              <img src="images/b7.jpeg" alt="Munchee Ginger Biscuit" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Munchee Ginger Biscuit</h3>
+              <p class="product-size">400g</p>
+              <p class="product-price">Rs 350.00</p>
+              <div class="product-actions">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cold Drinks Section -->
+      <section class="category-section" id="Cold Drinks">
+        <h3 class="category-title">Cold Drinks</h3>
+        <div class="item-grid">
+          <!-- Product 1 -->
+          <div class="product-card" data-category="Cold Drinks" data-price="150">
+            <div class="product-img-container">
+              <img src="images/watermellon.jpg" alt="Watermelon Juice" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Watermelon Juice</h3>
+              <p class="product-size">1 medium</p>
+              <p class="product-price">Rs 150.00</p>
+              <div class="product-actions">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card" data-category="Cold Drinks" data-price="150">
+            <div class="product-img-container">
+              <img src="images/avacado.jpg" alt="Avacado Juice" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Avacado Juice</h3>
+              <p class="product-size">1 medium</p>
+              <p class="product-price">Rs 150.00</p>
+              <div class="product-actions">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card" data-category="Cold Drinks" data-price="150">
+            <div class="product-img-container">
+              <img src="images/papaya.avif" alt="Papaya Juice" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Papaya Juice</h3>
+              <p class="product-size">1 medium</p>
+              <p class="product-price">Rs 150.00</p>
+              <div class="product-actions">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card" data-category="Cold Drinks" data-price="100">
+            <div class="product-img-container">
+              <img src="images/mojito.jpg" alt="Mojito Drink" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Mojito Drink</h3>
+              <p class="product-size">1 medium</p>
+              <p class="product-price">Rs 100.00</p>
+              <div class="product-actions">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="product-card" data-category="Cold Drinks" data-price="100">
+            <div class="product-img-container">
+              <img src="images/woodapple.jpg" alt="WoodApple Juice" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">WoodApple Juice</h3>
+              <p class="product-size">1 medium</p>
+              <p class="product-price">Rs 100.00</p>
+              <div class="product-actions">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="product-card" data-category="Cold Drinks" data-price="200">
+            <div class="product-img-container">
+              <img src="images/mixfruit.jpg" alt="MixFruit Juice" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">MixFruit Juice</h3>
+              <p class="product-size">1 medium</p>
+              <p class="product-price">Rs 200.00</p>
+              <div class="product-actions">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+          <div class="product-card" data-category="Cold Drinks" data-price="100">
+            <div class="product-img-container">
+              <img src="images/American-water-500ml.png" alt="Water Bottle" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Water Bottle - Cool</h3>
+              <p class="product-size">500ml</p>
+              <p class="product-price">Rs 100.00</p>
+              <div class="product-actions">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 8 -->
+          <div class="product-card" data-category="Cold Drinks" data-price="150">
+            <div class="product-img-container">
+              <img src="images/oneliter.jpeg" alt="Water Bottle" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Water Bottle - Cool</h3>
+              <p class="product-size">1L</p>
+              <p class="product-price">Rs 150.00</p>
+              <div class="product-actions">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 9 -->
+          <div class="product-card" data-category="Cold Drinks" data-price="300">
+            <div class="product-img-container">
+              <img src="images/w7000ml.jpg" alt="Water Bottle" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Water Bottle - Cool</h3>
+              <p class="product-size">5L</p>
+              <p class="product-price">Rs 300.00</p>
+              <div class="product-actions">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bath Items Section -->
+      <section class="category-section" id="Bath Items">
+        <h3 class="category-title">Bath Items</h3>
+        <div class="item-grid">
+          <!-- Product 1 -->
+          <div class="product-card" data-category="Bath Items" data-price="150">
+            <div class="product-img-container">
+              <img src="images/soap.jpg" alt="Dove Soap" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Dove Soap</h3>
+              <p class="product-size">1 medium</p>
+              <p class="product-price">Rs 150.00</p>
+              <div class="product-actions">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card" data-category="Bath Items" data-price="350">
+            <div class="product-img-container">
+              <img src="images/dandex.png" alt="Dandex Head Shampoo" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Dandex Head Shampoo</h3>
+              <p class="product-size">400ml</p>
+              <p class="product-price">Rs 350.00</p>
+              <div class="product-actions">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card" data-category="Bath Items" data-price="1050">
+            <div class="product-img-container">
+              <img src="images/towel.jpg" alt="Bath Towel" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Bath Towel</h3>
+              <p class="product-size">2m</p>
+              <p class="product-price">Rs 1050.00</p>
+              <div class="product-actions">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3 class="cart-title">Your Shopping Cart</h3>
+      <button class="close-cart" id="closeCart">&times;</button>
+    </div>
+    <div class="cart-content" id="cartContent">
+      <!-- Cart items will be added here dynamically -->
+      <div class="empty-cart-message" style="text-align: center; padding: 2rem; color: #666;">
+        <i class="fas fa-shopping-cart" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+        <p>Your cart is empty</p>
+      </div>
+    </div>
+    <div class="cart-total">
+      <div class="total-title">Total</div>
+      <div class="total-price" id="cartTotal">Rs 0.00</div>
+      <a href="cart.html"> <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button></a>
+    </div>
+  </div>
+
+  <!-- Cart Overlay -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <img src="images/logo.png" alt="Logo" class="footer-logo">
+          <p>Providing thrilling water rafting adventures in Kithulgala since 2005. Safety and fun are our top
+            priorities.</p>
+          <div class="social-icons mt-3">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="home page.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="activity.html">Activities</a></li>
+            <li><a href="shopping mart.html">Go Mart</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Activities</h5>
+          <ul>
+            <li><a href="#">White Water Rafting</a></li>
+            <li><a href="#">Canyoning</a></li>
+            <li><a href="#">Kayaking</a></li>
+            <li><a href="#">Jungle Trekking</a></li>
+            <li><a href="#">Camping</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Contact Us</h5>
+          <ul>
+            <li><i class="fas fa-map-marker-alt me-2"></i> Kithulgala, Sri Lanka</li>
+            <li><i class="fas fa-phone me-2"></i> +94 76 123 4567</li>
+            <li><i class="fas fa-envelope me-2"></i> info@kithulgalarafting.com</li>
+          </ul>
+          <div class="subscription-box mt-3" style="display: flex;height: 42px;">
+            <input type="email" class="form-control" placeholder="Your email" style="border-radius: 5px 0 0 5px;">
+            <button class="btn btn-booking"
+              style="color: #fffaff; background-color: #d4af37; border-radius: 0 5px 5px 0;height: 43px;">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Kithulgala Water Rafting. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script>
+    // Check for package in localStorage when page loads
+    document.addEventListener('DOMContentLoaded', function () {
+      const package = JSON.parse(localStorage.getItem('currentPackage'));
+      if (package) {
+        // Create a notification about the package
+        const packageNotification = document.createElement('div');
+        packageNotification.className = 'package-notification';
+        packageNotification.innerHTML = `
+      <div class="d-flex align-items-center justify-content-between p-3" style="background-color: rgba(255, 255, 255, 0.765); border-radius: 10px; margin-bottom: 20px;">
+        <div class="d-flex align-items-center">
+          <img src="${package.image}" alt="${package.name}" style="width: 60px; height: 60px; object-fit: cover; border-radius: 5px; margin-right: 15px;">
+          <div>
+            <h6 style="margin-bottom: 5px; color: var(--primary);">${package.name}</h6>
+            <small class="text-muted">${package.description}</small>
+          </div>
+        </div>
+        <div class="text-end">
+          <small class="d-block">${package.price}</small>
+          <a href="activity.html" class="btn btn-sm" style="background-color: var(--gold); color: var(--primary); padding: 2px 10px; font-size: 12px; margin-top: 5px;">View</a>
+        </div>
+      </div>
+    `;
+
+        // Insert at the top of the products section
+        const productsSection = document.querySelector('.products-section .container');
+        if (productsSection) {
+          productsSection.insertBefore(packageNotification, productsSection.firstChild);
+        }
+      }
+    });
+    // Loader
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        document.getElementById('loader').style.opacity = '0';
+        setTimeout(function () {
+          document.getElementById('loader').style.display = 'none';
+        }, 500);
+      }, 1000);
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Cart functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      const cartToggle = document.getElementById('cartToggle');
+      const closeCart = document.getElementById('closeCart');
+      const cartSidebar = document.getElementById('cartSidebar');
+      const cartOverlay = document.getElementById('cartOverlay');
+      const addToCartButtons = document.querySelectorAll('.add-to-cart');
+      const cartContent = document.getElementById('cartContent');
+      const cartTotal = document.getElementById('cartTotal');
+      const cartCount = document.getElementById('cart-count');
+      const checkoutBtn = document.getElementById('checkoutBtn');
+
+      // Initialize cart from localStorage or empty array
+      let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+      // Toggle cart sidebar
+      cartToggle.addEventListener('click', function () {
+        cartSidebar.classList.add('open');
+        cartOverlay.classList.add('active');
+        updateCartDisplay();
+      });
+
+      closeCart.addEventListener('click', function () {
+        cartSidebar.classList.remove('open');
+        cartOverlay.classList.remove('active');
+      });
+
+      cartOverlay.addEventListener('click', function () {
+        cartSidebar.classList.remove('open');
+        cartOverlay.classList.remove('active');
+      });
+
+      // Add to cart functionality
+      addToCartButtons.forEach(button => {
+        // In the add to cart event listener
+        button.addEventListener('click', function () {
+          const currentCurrency = localStorage.getItem('currency') || 'Rs';
+          const productCard = this.closest('.product-card');
+          const productTitle = productCard.querySelector('.product-title').textContent;
+          const productPriceText = productCard.querySelector('.product-price').textContent;
+
+          // Extract numeric value regardless of currency
+          const priceValue = parseFloat(productPriceText.replace(/[^0-9.]/g, ''));
+
+          // Store price in base currency (Rs)
+          let priceInRs;
+          if (productPriceText.includes('$')) {
+            priceInRs = priceValue * 300; // Convert back to Rs if displayed as $
+          } else {
+            priceInRs = priceValue;
+          }
+
+          const productImage = productCard.querySelector('.product-img').src;
+          const quantity = parseInt(productCard.querySelector('.quantity-input').value);
+
+          // Check if item already exists in cart
+          const existingItemIndex = cartItems.findIndex(item => item.title === productTitle);
+
+          if (existingItemIndex >= 0) {
+            cartItems[existingItemIndex].quantity += quantity;
+          } else {
+            cartItems.push({
+              title: productTitle,
+              price: priceInRs, // Store in base currency (Rs)
+              image: productImage,
+              quantity: quantity
+            });
+          }
+
+          localStorage.setItem('cartItems', JSON.stringify(cartItems));
+          updateCartDisplay();
+          cartSidebar.classList.add('open');
+          cartOverlay.classList.add('active');
+          showToast(`${productTitle} added to cart!`);
+        });
+      });
+
+      // Function to show toast notification
+      function showToast(message) {
+        const toast = document.createElement('div');
+        toast.className = 'toast-notification';
+        toast.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`;
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+          toast.style.opacity = '0';
+          setTimeout(() => toast.remove(), 500);
+        }, 3000);
+      }
+
+      // Update cart display
+      function updateCartDisplay() {
+        // Clear existing content
+        cartContent.innerHTML = '';
+
+        const currentCurrency = localStorage.getItem('currency') || 'Rs';
+        const conversionRate = 300; // 1 USD = 300 LKR
+
+        if (cartItems.length === 0) {
+          cartContent.innerHTML = `
+            <div class="empty-cart-message" style="text-align: center; padding: 2rem; color: #666;">
+              <i class="fas fa-shopping-cart" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+              <p>Your cart is empty</p>
+            </div>
+          `;
+          cartTotal.textContent = currentCurrency === '$' ? '$0.00' : 'Rs 0.00';
+          cartCount.textContent = '0';
+          return;
+        }
+
+        let total = 0;
+        let itemCount = 0;
+
+        // Add each item to cart display
+        cartItems.forEach((item, index) => {
+          const itemTotal = item.price * item.quantity;
+          total += itemTotal;
+          itemCount += item.quantity;
+
+          const displayPrice = currentCurrency === '$'
+            ? `$${(item.price / conversionRate).toFixed(2)}`
+            : `Rs ${item.price.toFixed(2)}`;
+
+          const cartItemElement = document.createElement('div');
+          cartItemElement.classList.add('cart-item');
+          cartItemElement.innerHTML = `
+            <img src="${item.image}" alt="${item.title}" class="cart-item-img">
+            <div class="cart-item-details">
+              <h4 class="cart-item-title">${item.title}</h4>
+              <p class="cart-item-price">${displayPrice}</p>
+              <div class="cart-item-quantity">
+                <button class="decrease-quantity" data-index="${index}">-</button>
+                <span>${item.quantity}</span>
+                <button class="increase-quantity" data-index="${index}">+</button>
+              </div>
+            </div>
+            <button class="remove-item" data-index="${index}">
+              <i class="fas fa-trash"></i>
+            </button>
+          `;
+
+          cartContent.appendChild(cartItemElement);
+        });
+
+        // Update total and count
+        const displayTotal = currentCurrency === '$'
+          ? `$${(total / conversionRate).toFixed(2)}`
+          : `Rs ${total.toFixed(2)}`;
+
+        cartTotal.textContent = displayTotal;
+        cartCount.textContent = itemCount;
+
+        // Add event listeners to quantity buttons
+        document.querySelectorAll('.decrease-quantity').forEach(button => {
+          button.addEventListener('click', function () {
+            const index = parseInt(this.dataset.index);
+            if (cartItems[index].quantity > 1) {
+              cartItems[index].quantity--;
+            } else {
+              cartItems.splice(index, 1);
+            }
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            updateCartDisplay();
+          });
+        });
+
+        document.querySelectorAll('.increase-quantity').forEach(button => {
+          button.addEventListener('click', function () {
+            const index = parseInt(this.dataset.index);
+            cartItems[index].quantity++;
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            updateCartDisplay();
+          });
+        });
+
+        document.querySelectorAll('.remove-item').forEach(button => {
+          button.addEventListener('click', function () {
+            const index = parseInt(this.dataset.index);
+            cartItems.splice(index, 1);
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            updateCartDisplay();
+          });
+        });
+      }
+
+      // Checkout button
+      checkoutBtn.addEventListener('click', function () {
+        if (cartItems.length === 0) {
+          showToast('Your cart is empty!');
+          return;
+        }
+
+        // Here you would typically redirect to a checkout page
+        showToast('Proceeding to checkout!');
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        // window.location.href = 'checkout.html'; // Uncomment when you have a checkout page
+      });
+
+      // Search and filter functionality
+      const searchButton = document.getElementById('searchButton');
+      const categoryFilter = document.getElementById('categoryFilter');
+      const priceFilter = document.getElementById('priceFilter');
+      const searchInput = document.getElementById('searchInput');
+      const productCards = document.querySelectorAll('.product-card');
+
+      searchButton.addEventListener('click', filterProducts);
+      categoryFilter.addEventListener('change', filterProducts);
+      priceFilter.addEventListener('change', filterProducts);
+      searchInput.addEventListener('keyup', function (e) {
+        if (e.key === 'Enter') {
+          filterProducts();
+        }
+      });
+
+      function filterProducts() {
+        const selectedCategory = categoryFilter.value;
+        const selectedPrice = priceFilter.value;
+        const searchQuery = searchInput.value.toLowerCase();
+
+        // Hide all category sections initially
+        document.querySelectorAll('.category-section').forEach(section => {
+          section.style.display = 'none';
+        });
+
+        let hasResults = false;
+
+        productCards.forEach(card => {
+          const category = card.dataset.category;
+          const title = card.querySelector('.product-title').textContent.toLowerCase();
+          const price = parseFloat(card.dataset.price);
+
+          // Check if item matches filters
+          const matchesCategory = selectedCategory === 'all' || category === selectedCategory;
+          const matchesSearch = title.includes(searchQuery);
+
+          // Show/hide based on filters
+          if (matchesCategory && matchesSearch) {
+            card.style.display = 'block';
+            // Show the parent category section
+            const categorySection = card.closest('.category-section');
+            if (categorySection) {
+              categorySection.style.display = 'block';
+              hasResults = true;
+            }
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // If no results, show a message
+        if (!hasResults) {
+          const noResults = document.createElement('div');
+          noResults.className = 'no-results-message';
+          noResults.innerHTML = '<p>No products found matching your search.</p>';
+          document.querySelector('.products-section .container').appendChild(noResults);
+        } else {
+          const existingNoResults = document.querySelector('.no-results-message');
+          if (existingNoResults) {
+            existingNoResults.remove();
+          }
+        }
+
+        // Sort products if price filter is applied
+        if (selectedPrice !== 'all') {
+          const containers = document.querySelectorAll('.item-grid');
+
+          containers.forEach(container => {
+            const cards = Array.from(container.querySelectorAll('.product-card[style="display: block"]'));
+
+            cards.sort((a, b) => {
+              const priceA = parseFloat(a.dataset.price);
+              const priceB = parseFloat(b.dataset.price);
+              return selectedPrice === 'low' ? priceA - priceB : priceB - priceA;
+            });
+
+            cards.forEach(card => {
+              container.appendChild(card);
+            });
+          });
+        }
+      }
+
+      // Initialize cart display
+      updateCartDisplay();
+    });
+
+    // Currency conversion functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      function updatePrices(currency) {
+        const prices = document.querySelectorAll('.product-price:not(.cart-item-price):not(.total-price)');
+        const conversionRate = 300; // 1 USD = 300 LKR
+
+        prices.forEach(priceElement => {
+          // Skip if the element is inside the cart
+          if (priceElement.closest('.cart-item') || priceElement.classList.contains('total-price')) {
+            return;
+          }
+
+          const priceText = priceElement.textContent.trim();
+          let priceValue;
+
+          // Extract numeric value from price text
+          if (priceText.includes('Rs')) {
+            priceValue = parseFloat(priceText.replace('Rs', '').trim());
+          } else if (priceText.includes('$')) {
+            priceValue = parseFloat(priceText.replace('$', '').trim());
+          } else {
+            priceValue = parseFloat(priceText);
+          }
+
+          if (isNaN(priceValue)) {
+            console.warn(`Invalid price value: ${priceText}`);
+            return;
+          }
+
+          // Store the base price in data attribute
+          if (currency === '$') {
+            priceElement.textContent = `$${(priceValue / conversionRate).toFixed(2)}`;
+            priceElement.closest('.product-card').dataset.price = (priceValue / conversionRate).toFixed(2);
+          } else {
+            priceElement.textContent = `Rs ${priceValue.toFixed(2)}`;
+            priceElement.closest('.product-card').dataset.price = priceValue.toFixed(2);
+          }
+        });
+
+        // Update cart display when currency changes
+        updateCartDisplay();
+
+      }
+
+      // Listen for currency changes
+      window.addEventListener('currencyChange', () => {
+        const currentCurrency = localStorage.getItem('currency') || 'Rs';
+        updatePrices(currentCurrency);
+      });
+
+      // Initialize with the correct currency on page load
+      const savedCurrency = localStorage.getItem('currency') || 'Rs';
+      updatePrices(savedCurrency);
+    });
+  </script>
+</body>
+
+</html>

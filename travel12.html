@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Rafting | Kithulgala Water Adventures</title>
+    <meta name="description"
+        content="Enjoy a safe and exciting family rafting adventure in Kithulgala. Perfect for families with children, our gentle rapids and expert guides ensure a fun experience for all ages.">
+    <meta name="keywords"
+        content="Kithulgala family rafting, Sri Lanka rafting with kids, family adventure tours, Kelani River rafting, gentle rapids">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://example.com/images/favicon.ico" type="image/x-icon">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <script src="chatbot.js"></script>
+
+    <link rel="stylesheet" href="travel_css.css">
+    <style>
+        /* Price List Section */
+        .price {
+            margin-left: 8px;
+            /* or any spacing you prefer */
+        }
+
+        .price-list-section {
+            background-color: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(193, 154, 107, 0.3);
+            margin: 2rem 0;
+        }
+
+        .price-list-section h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .price-list-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+
+        .price-table th {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem;
+            text-align: left;
+        }
+
+        .price-table td {
+            padding: 0.8rem;
+            border-bottom: 1px solid rgba(10, 26, 74, 0.1);
+        }
+
+        .price-table tr:nth-child(even) {
+            background-color: rgba(10, 26, 74, 0.03);
+        }
+
+        .price-table tr:hover {
+            background-color: rgba(10, 26, 74, 0.05);
+        }
+
+        .price-currency {
+            color: var(--gold);
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="https://example.com/videos/family-rafting.mp4" type="video/mp4">
+        </video>
+    </div>
+
+   
+     <!-- Navigation -->
+   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" alt="Kithulgala Water Rafting Logo" style="height: 50px;margin-left: -45px;">
+      </a>
+      <span  class="nav_topic" style="margin-left: -1px;">Kithulgala Water Rafting </span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="home page.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="home page.html #about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="activity.html">Activities</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Go Mart
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="shopping mart.html">All Products</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="shopping mart.html">Biscuits</a></li>
+              <li><a class="dropdown-item" href="shopping mart.html">Beverages</a></li>
+              <li><a class="dropdown-item" href="shopping mart.html">Bath Items</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="home page.html #contact">Contact</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn gold-outline rounded-pill px-4" href="cart.html">Book Now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+    <!-- Booking Steps -->
+    <div class="booking-steps">
+        <div class="step-icons">
+            <div class="step-icon active">
+                <div class="icon-container">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <span class="step-title">TRAVEL DATE</span>
+            </div>
+            <div class="step-line active"></div>
+            <div class="step-icon">
+                <div class="icon-container">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <span class="step-title">CART</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-icon">
+                <div class="icon-container">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <span class="step-title">BOOKING INFO</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-icon">
+                <div class="icon-container">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <span class="step-title">PAYMENT</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="row">
+            <!-- Package Details -->
+            <div class="col-lg-8">
+                <div class="package-container">
+                    <!-- Carousel -->
+                    <div id="packageCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Indicators/dots -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#packageCarousel" data-bs-slide-to="0"
+                                class="active"></button>
+                            <button type="button" data-bs-target="#packageCarousel" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#packageCarousel" data-bs-slide-to="2"></button>
+                        </div>
+
+                        <!-- The slideshow/carousel -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/fr1.jpg" alt="Family Rafting Adventure" class="d-block w-100">
+                                <div class="carousel-caption">
+                                    <h3>Family Rafting Adventure</h3>
+                                    <p>Perfect for families with children ages 6 and up - gentle rapids and maximum fun!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/fr2.jpg" alt="Family Fun on the River" class="d-block w-100">
+                                <div class="carousel-caption">
+                                    <h3>Quality Family Time</h3>
+                                    <p>Create unforgettable memories together on the beautiful Kelani River</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/fr3.jpg" alt="Professional Family Guides" class="d-block w-100">
+                                <div class="carousel-caption">
+                                    <h3>Expert Family Guides</h3>
+                                    <p>Our guides specialize in making rafting fun and safe for all ages</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls/icons -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#packageCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#packageCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
+                    <div class="package-details">
+                        <h1 class="package-title">FAMILY RAFTING ADVENTURE <span class="availability-badge">Available
+                                Now</span></h1>
+                        <p class="package-description">
+                            Our Family Rafting adventure is specially designed for families with children ages 6 and up.
+                            Experience the thrill of white water rafting on gentle Class I-II rapids perfect for
+                            first-timers and younger adventurers. This 2-3 hour journey down the beautiful Kelani River
+                            combines excitement with safety, allowing your whole family to enjoy Sri Lanka's stunning
+                            river scenery while working together as a team. Our expert guides specialize in family
+                            adventures and will ensure everyone has a fantastic time.
+                        </p>
+
+                        <div class="package-highlights">
+                            <h4>Adventure Highlights</h4>
+                            <ul>
+                                <li>Gentle Class I-II rapids perfect for families with children</li>
+                                <li>Minimum age 6 years (youngest in Sri Lanka!)</li>
+                                <li>Special family-sized rafts with extra safety features</li>
+                                <li>Beautiful scenery along the Kelani River</li>
+                                <li>Safe swimming stops in calm sections</li>
+                                <li>Fun water games and activities for kids</li>
+                                <li>Professional guides trained in family rafting</li>
+                            </ul>
+                        </div>
+
+                        <p class="package-description">
+                            Your family rafting adventure begins with a comprehensive safety briefing and equipment
+                            fitting at our base camp. We'll provide all necessary gear including life jackets (specially
+                            sized for children), helmets, and paddles. After learning basic paddling techniques, your
+                            family will board our specially designed family raft with your guide. The route includes
+                            gentle rapids interspersed with calm sections where you can enjoy the scenery, spot
+                            wildlife, and even swim in the river. Our guides will lead fun water games and activities to
+                            keep children engaged throughout the journey.
+                        </p>
+
+                        <p class="package-description">
+                            We use wider, more stable rafts for families and assign guides who specialize in working
+                            with children. The adventure concludes with a scenic float to our take-out point, where
+                            transportation will return you to our base camp. Complimentary snacks and drinks are
+                            provided after your rafting adventure, giving your family time to relax and share stories of
+                            your river journey.
+                        </p>
+
+                        <!-- Price List Section -->
+                        <div class="price-list-section">
+                            <h4>Family-Friendly Pricing</h4>
+                            <p>We offer special family packages to make rafting affordable for everyone. All prices
+                                include equipment rental and professional guides.</p>
+
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Half-Day (LKR / USD)</th>
+                                        <th>Full-Day (LKR / USD)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Local Child (Age 8-12)</td>
+                                        <td><span class="price-currency">Rs</span> 5,000</td>
+                                        <td><span class="price-currency">Rs</span> 8,000</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Local Adult (Age 13+)</td>
+                                        <td><span class="price-currency">Rs</span> 8,000</td>
+                                        <td><span class="price-currency">Rs</span> 12,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Foreign Child (Age 8-12)</td>
+                                        <td><span class="price-currency">$</span> 30</td>
+                                        <td><span class="price-currency">$</span> 45</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Foreign Adult (Age 13+)</td>
+                                        <td><span class="price-currency">$</span> 50</td>
+                                        <td><span class="price-currency">$</span> 75</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="mt-3">
+                                <p><strong>Family Specials:</strong></p>
+                                <ul>
+                                    <li>Family of 4 discount: 10% off total</li>
+                                    <li>Family of 5+ discount: 15% off total</li>
+                                    <li>Local rates apply to Sri Lankan citizens and residents with valid ID</li>
+                                    <li>Prices include all safety equipment and professional guides</li>
+                                    <li>Photography service available for Rs 2,000 / $15 extra</li>
+                                    <li>Minimum age: 6 years (with parental supervision)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="included-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <strong>Duration</strong>
+                                    <span>2-3 hours (half-day) / 5-6 hours (full-day)</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <strong>Group Size</strong>
+                                    <span>4-6 per raft (families stay together)</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-water"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <strong>Rapids</strong>
+                                    <span>Class I-II (gentle with small waves)</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <strong>Availability</strong>
+                                    <span>Year-round (best Nov-Apr)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="safety-section">
+                            <h4><i class="fas fa-shield-alt"></i> Family Safety Information</h4>
+                            <p>Safety is our top priority, especially for families with children. All participants
+                                receive comprehensive safety training before entering the river. We use specially
+                                designed family rafts that are wider and more stable. Children wear properly fitted life
+                                jackets at all times on the water. Our guides are certified in first aid and river
+                                rescue, with special training in working with children. Minimum age is 6 years.
+                                Non-swimmers are welcome - life jackets keep everyone safe in the water.
+                            </p>
+                        </div>
+
+                        <h3>What to Bring</h3>
+                        <ul>
+                            <li>Swimwear or quick-dry clothing</li>
+                            <li>Secure footwear that can get wet (water shoes or sandals with straps)</li>
+                            <li>Sun protection (hat, sunscreen - waterproof recommended)</li>
+                            <li>Change of clothes and towel</li>
+                            <li>Waterproof camera (optional - we provide secure storage)</li>
+                            <li>Water bottle (we provide refills)</li>
+                            <li>Any required medications (in waterproof container)</li>
+                        </ul>
+
+                        <div class="testimonials">
+                            <h3>What Families Say About Us</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-text">
+                                            "Our 7 and 9 year olds had an absolute blast! The guides were amazing with
+                                            kids - so patient and fun. The rapids were exciting but not scary, perfect
+                                            for our first family rafting experience. The swimming stops were a big hit
+                                            too. We felt completely safe the whole time, and the photos we purchased
+                                            captured priceless memories. Can't recommend this enough for families!"
+                                        </div>
+                                        <div class="testimonial-author">
+                                            <img src="images/4ma.jpg" alt="The Silva Family" class="author-avatar">
+                                            <div class="author-info">
+                                                <strong>Silva Family</strong>
+                                                <span>Colombo, Sri Lanka</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-text">
+                                            "As first-time rafters with three kids (ages 6, 8, and 11), we were a bit
+                                            nervous but the team put us completely at ease. Our guide Saman was
+                                            fantastic with the kids - he taught them paddle songs and made the whole
+                                            experience magical. The scenery was breathtaking and we saw monkeys along
+                                            the riverbanks! The perfect mix of adventure and safety for families."
+                                        </div>
+                                        <div class="testimonial-author">
+                                            <img src="images/1male.jpg" alt="The Johnson Family" class="author-avatar">
+                                            <div class="author-info">
+                                                <strong>Johnson Family</strong>
+                                                <span>London, UK</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-section">
+                            <h3>Frequently Asked Questions</h3>
+                            <div class="accordion" id="faqAccordion">
+                                <div class="faq-item">
+                                    <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq1"
+                                        aria-expanded="false">
+                                        Is rafting safe for young children?
+
+                                    </div>
+                                    <div id="faq1" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                                        Yes! Our family rafting route is specially designed for children as young as 6.
+                                        We use wider, more stable rafts and only run on gentle Class I-II rapids.
+                                        Children wear properly fitted life jackets at all times on the water, and our
+                                        guides have special training in working with young rafters. Safety is our top
+                                        priority for families.
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq2"
+                                        aria-expanded="false">
+                                        What if my child can't swim?
+
+                                    </div>
+                                    <div id="faq2" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                                        Non-swimmers are welcome on our family rafting trips. All participants wear US
+                                        Coast Guard-approved life jackets that keep you buoyant in the water. Our guides
+                                        give special attention to non-swimmers and the calm sections between rapids
+                                        allow for safe swimming with supervision. Please inform your guide if anyone in
+                                        your family is a non-swimmer.
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq3"
+                                        aria-expanded="false">
+                                        How many people fit in a family raft?
+
+                                    </div>
+                                    <div id="faq3" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                                        Our family rafts typically accommodate 4-6 people plus the guide. We keep
+                                        families together in the same raft whenever possible. For larger families, we
+                                        can arrange multiple rafts to stay close together on the river. Small families
+                                        may be combined with another small family group.
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq4"
+                                        aria-expanded="false">
+                                        What's the difference between half-day and full-day?
+
+                                    </div>
+                                    <div id="faq4" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                                        The half-day trip covers about 7km of river with several fun rapids and takes
+                                        2-3 hours on the water. The full-day trip covers 14km with more rapids and
+                                        includes a riverside picnic lunch, taking 5-6 hours. Both are suitable for
+                                        families, with the full-day offering more time to enjoy the scenery and swimming
+                                        spots.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Form Column -->
+            <div class="col-lg-4">
+                <div class="booking-form-container">
+                    <div class="booking-form">
+                        <h3 class="form-title">BOOK YOUR FAMILY ADVENTURE</h3>
+                        <div class="price-display">FROM <span class="price">Rs 5,000 ($30)</span></div>
+
+                        <!-- Tourist Type -->
+                        <div class="mb-3">
+                            <label for="tourist-type" class="form-label"><i class="fas fa-passport"></i> Tourist
+                                Type:</label>
+                            <select id="tourist-type" class="form-select form-control" onchange="updatePrices()">
+                                <option value="local">Local (Sri Lankan)</option>
+                                <option value="foreign">Foreign Tourist</option>
+                            </select>
+                        </div>
+
+                        <!-- Travel Date -->
+                        <div class="mb-3">
+                            <label for="travel-date" class="form-label"><i class="fas fa-calendar-day"></i> Select
+                                Travel
+                                Date:</label>
+                            <div class="input-group">
+                                <input type="date" id="travel-date" class="form-control" min="2024-01-01" required>
+                                <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- Session Type -->
+                        <div class="mb-3">
+                            <label for="session-type" class="form-label"><i class="fas fa-clock"></i> Session
+                                Type:</label>
+                            <select id="session-type" class="form-select form-control" onchange="updatePrices()">
+                                <option value="half-day">Half-Day Adventure</option>
+                                <option value="full-day">Full-Day Adventure</option>
+                            </select>
+                        </div>
+
+                        <!-- Travelers -->
+                        <div class="mb-3">
+                            <label class="form-label"><i class="fas fa-users"></i> Number of Travelers:</label>
+
+                            <div class="traveler-count">
+                                <label for="childCount">Child (age 8-12)</label>
+                                <input type="number" class="form-control traveler-input" id="childCount" min="0"
+                                    value="0" onchange="updateTotalTravelers()">
+                            </div>
+
+
+
+                            <div class="traveler-count">
+                                <label for="adultCount">Adult (age 13+)</label>
+                                <input type="number" class="form-control traveler-input" id="adultCount" min="0"
+                                    value="0" onchange="updateTotalTravelers()">
+                            </div>
+                        </div>
+
+                        <!-- Total Travelers -->
+                        <div class="total-travelers">
+                            <span>Total Travelers:</span>
+                            <span id="totalTravelers">0</span>
+                        </div>
+
+                        <!-- Total Price -->
+                        <div class="total-travelers">
+                            <span>Estimated Total:</span>
+                            <span class="total-price" id="totalPrice">Rs 0</span>
+                        </div>
+
+                        <!-- Family Discount Notice -->
+                        <div class="alert alert-info mt-3">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <strong>Family Discount:</strong> 10% off for 4 family members, 15% off for 5+ (applied at
+                            checkout)
+                        </div>
+
+                        <!-- Guarantee Badge -->
+                        <div class="guarantee-badge">
+                            <i class="fas fa-lock"></i>
+                            Secure Booking & Best Price Guarantee
+                        </div>
+
+                        <!-- Buttons -->
+                        <button class="btn-add-to-cart" onclick="addToCart()">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="btn-clear" onclick="clearForm()">
+                            <i class="fas fa-eraser"></i> Clear Selection
+                        </button>
+
+                        <!-- Quick Info -->
+                        <div class="mt-3">
+                            <p class="small text-muted"><i class="fas fa-info-circle text-primary"></i> Free
+                                cancellation up to 24
+                                hours before activity</p>
+                            <p class="small text-muted"><i class="fas fa-phone-alt text-primary"></i> Need help? Call
+                                +94 76 123 4567
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Why Choose Us - Moved below the booking form -->
+                    <div class="why-choose-us mt-4">
+                        <h4>Why Choose Our Family Rafting</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Lowest minimum age in
+                                Sri Lanka (6+)</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Specially designed
+                                family rafts</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Guides trained in
+                                family adventures</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Gentle rapids perfect
+                                for kids</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Fun water games and
+                                activities</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Family discount
+                                packages</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- Chatbot -->
+      <div id="chatbot-icon" onclick="toggleChat()">
+        <img src="images/asit.png" alt="Chat with us">
+    </div>
+
+    <div id="chatbot">
+        <div class="chat-header">
+            <img src="images/asit.png" alt="Assistant" class="chat-header-icon">
+            <span>Adventure Assistant</span>
+            <button class="close-btn" onclick="toggleChat()">×</button>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="message bot-message">
+                Hello! I'm your adventure assistant. Ask me about our rafting, canyoning, trekking packages or anything
+                else! 😊
+                <div class="quick-buttons">
+                    <button class="quick-btn" onclick="sendQuickMessage('Packages')">Packages</button>
+                    <button class="quick-btn" onclick="sendQuickMessage('Prices')">Prices</button>
+                    <button class="quick-btn" onclick="sendQuickMessage('Safety')">Safety</button>
+                    <button class="quick-btn" onclick="sendQuickMessage('Booking')">Booking</button>
+                </div>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="user-input" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <img src="images/logo.png" alt="Logo" class="footer-logo">
+                    <p>Providing thrilling water adventures in Kithulgala since 2005. Safety and fun are our top
+                        priorities.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Activities</h5>
+                    <ul>
+                        <li><a href="kayaking.html">White Water Kayaking</a></li>
+                        <li><a href="rafting.html">White Water Rafting</a></li>
+                        <li><a href="canyoning.html">Canyoning</a></li>
+                        <li><a href="trekking.html">Jungle Trekking</a></li>
+                        <li><a href="camping.html">Camping</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Contact Us</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Kithulgala, Sri Lanka</li>
+                        <li><i class="fas fa-phone me-2"></i> +94 76 123 4567</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@kithulgalarafting.com</li>
+                    </ul>
+                     <div class="subscription-box mt-3" style="display: flex;height: 60px;">
+                        <input type="email" class="form-control" placeholder="Your email"
+                            style="border-radius: 5px 0 0 5px;">
+                        <button class="btn btn-booking"
+                            style="color: #fffaff; background-color: #d4af37; border-radius: 0 5px 5px 0;height: 43px;">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kithulgala Water Adventures. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+ 
+ <!-- Add to Cart Modal -->
+ <div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="border-radius: 15px; overflow: hidden;">
+        <div class="modal-header" style="background-color: var(--primary); border-bottom: 2px solid var(--gold);">
+          <h5 class="modal-title text-white" id="addToCartModalLabel">Add Adventure Essentials</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="text-center mb-4">
+            <i class="fas fa-shopping-basket" style="font-size: 3rem; color: var(--gold);"></i>
+            <h4 class="mt-3" style="color: var(--primary);">Your Rafting Adventure is Added!</h4>
+            <p class="text-muted">Would you like to add adventure essentials from our Go Mart?</p>
+          </div>
+          
+          <div class="package-summary mb-4 p-3" style="background-color: rgba(10, 26, 74, 0.05); border-radius: 10px; border-left: 3px solid var(--gold);">
+            <div class="d-flex align-items-center">
+              <img src="images/ca1.jpg" alt="White Water Rafting" style="width: 80px; height: 60px; object-fit: cover; border-radius: 5px;">
+              <div class="ms-3">
+                <h6 style="color: var(--primary); margin-bottom: 0;">FAMILY RAFTING ADVENTURE</h6>
+                <small class="text-muted" id="modalPackageDetails">Basic Course - 3 major rapids</small>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between mt-2">
+              <span>Total:</span>
+              <strong id="modalPackagePrice">Rs 5,000/$30</strong>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer" style="border-top: none; background-color: #f8f9fa; border-radius: 0 0 15px 15px;">
+          <button type="button" class="btn btn-outline-secondary" style="border-radius: 8px;" data-bs-dismiss="modal" id="continueToCheckout">
+            Continue to Checkout
+          </button>
+          <button type="button" class="btn btn-booking" style="border-radius: 8px; background-color: var(--gold);" id="goToMart">
+  <i class="fas fa-store me-2"></i> Visit Go Mart
+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        <script>
+// Price structure for canyoning
+const canyoningPrices = {
+    local: {
+                'half-day': { child: 5000, adult: 8000 },
+                'full-day': { child: 8000, adult: 12000 }
+            },
+            foreign: {
+                'half-day': { child: 30, adult: 50 },
+                'full-day': { child: 45, adult: 75 }
+            }
+};
+
+// Main function to update traveler count and pricing
+function updateTotalTravelers() {
+    // Get all input values
+    const touristType = document.getElementById("tourist-type").value;
+    const sessionType = document.getElementById("session-type").value;
+    const childCount = parseInt(document.getElementById("childCount").value) || 0;
+    const adultCount = parseInt(document.getElementById("adultCount").value) || 0;
+    const totalTravelers = childCount + adultCount;
+
+    // Calculate total price
+    const totalPrice = 
+        (childCount * canyoningPrices[touristType][sessionType].child) + 
+        (adultCount * canyoningPrices[touristType][sessionType].adult);
+
+    // Update the display
+    document.getElementById("totalTravelers").textContent = totalTravelers;
+    
+    // Format price display based on tourist type
+    const currencySymbol = touristType === 'local' ? 'Rs ' : '$';
+    document.getElementById("totalPrice").textContent = currencySymbol + totalPrice.toLocaleString();
+}
+
+// Called when tourist type or session type changes
+function updatePrices() {
+    updateTotalTravelers();
+}
+
+// Clear the entire form
+function clearForm() {
+    document.getElementById("travel-date").value = "";
+    document.getElementById("tourist-type").value = "local";
+    document.getElementById("session-type").value = "half-day";
+    document.getElementById("childCount").value = "0";
+    document.getElementById("adultCount").value = "0";
+    updateTotalTravelers();
+}
+
+// Add to cart functionality
+function addToCart() {
+    const date = document.getElementById("travel-date").value;
+    if (!date) {
+        alert("Please select a travel date");
+        return;
+    }
+
+    const totalTravelers = parseInt(document.getElementById("totalTravelers").textContent);
+    if (totalTravelers === 0) {
+        alert("Please add at least one traveler");
+        return;
+    }
+
+    // Get package details
+    const touristType = document.getElementById("tourist-type").value;
+    const sessionType = document.getElementById("session-type").value;
+    const packageName = "CANYONING ADVENTURE";
+    const packageDescription = sessionType === "half-day" ? 
+        "Half-Day Adventure" : "Full-Day Adventure";
+    const packagePrice = document.getElementById("totalPrice").textContent;
+    const packageImage = "images/ca1.jpg";
+    
+    // Save package to localStorage
+    const packageDetails = {
+        name: packageName,
+        description: packageDescription,
+        price: packagePrice,
+        image: packageImage,
+        date: date,
+        travelers: totalTravelers,
+        session: sessionType,
+        touristType: touristType,
+        type: "canyoning-package"
+    };
+    
+    localStorage.setItem('currentPackage', JSON.stringify(packageDetails));
+    
+    // Update modal content
+    document.getElementById("modalPackageDetails").textContent = packageDescription;
+    document.getElementById("modalPackagePrice").textContent = packagePrice;
+    
+    // Show modal
+    var modal = new bootstrap.Modal(document.getElementById('addToCartModal'));
+    modal.show();
+}
+
+// Chatbot functions
+function toggleChat() {
+    const chatbot = document.getElementById("chatbot");
+    chatbot.style.display = chatbot.style.display === "block" ? "none" : "block";
+}
+
+function sendMessage() {
+    const userInput = document.getElementById("user-input");
+    if (userInput.value.trim() !== "") {
+        // Add user message to chat
+        addMessageToChat(userInput.value, 'user');
+        
+        // Process message and generate bot response
+        const botResponse = generateBotResponse(userInput.value);
+        addMessageToChat(botResponse, 'bot');
+        
+        userInput.value = "";
+    }
+}
+
+function sendQuickMessage(msg) {
+    document.getElementById("user-input").value = msg;
+    sendMessage();
+}
+
+function handleKeyPress(e) {
+    if (e.key === "Enter") {
+        sendMessage();
+    }
+}
+
+function addMessageToChat(message, sender) {
+    const chatBody = document.getElementById("chat-body");
+    const messageDiv = document.createElement("div");
+    messageDiv.className = `message ${sender}-message`;
+    messageDiv.textContent = message;
+    chatBody.appendChild(messageDiv);
+    chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+function generateBotResponse(message) {
+    // Simple response logic - can be expanded
+    const lowerMsg = message.toLowerCase();
+    
+    if (lowerMsg.includes('price') || lowerMsg.includes('cost')) {
+        return "Our canyoning prices start from Rs 7,500 for locals and $45 for foreigners. You can see all pricing details on the booking page.";
+    } else if (lowerMsg.includes('safety') || lowerMsg.includes('danger')) {
+        return "Safety is our top priority! We use top-quality equipment and our guides are certified in first aid and canyon rescue. All activities include thorough safety briefings.";
+    } else if (lowerMsg.includes('book') || lowerMsg.includes('reserve')) {
+        return "You can book directly on this page by selecting your date and number of travelers. Need help? Call us at +94 76 123 4567.";
+    } else if (lowerMsg.includes('time') || lowerMsg.includes('duration')) {
+        return "The canyoning adventure takes 4-6 hours including training. Half-day sessions are about 4 hours, full-day about 6 hours.";
+    } else {
+        return "Thanks for your message! For more specific information about canyoning, please ask about prices, safety, or booking. Or call us at +94 76 123 4567.";
+    }
+}
+
+// Initialize when page loads
+document.addEventListener("DOMContentLoaded", function() {
+    // Set initial values
+    updateTotalTravelers();
+
+    // Set minimum date to today
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById("travel-date").min = today;
+
+    // Set up event listeners
+    document.getElementById("tourist-type").addEventListener("change", updateTotalTravelers);
+    document.getElementById("session-type").addEventListener("change", updateTotalTravelers);
+    document.getElementById("childCount").addEventListener("change", updateTotalTravelers);
+    document.getElementById("adultCount").addEventListener("change", updateTotalTravelers);
+    document.getElementById("childCount").addEventListener("input", updateTotalTravelers);
+    document.getElementById("adultCount").addEventListener("input", updateTotalTravelers);
+
+    // Set up modal button events
+    document.getElementById("continueToCheckout").addEventListener('click', function() {
+        window.location.href = "cart.html";
+    });
+    
+    document.getElementById("goToMart").addEventListener('click', function() {
+        window.location.href = "shopping mart.html";
+    });
+
+    // Navbar scroll effect
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 50) {
+            document.querySelector(".navbar").classList.add("scrolled");
+        } else {
+            document.querySelector(".navbar").classList.remove("scrolled");
+        }
+    });
+});
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

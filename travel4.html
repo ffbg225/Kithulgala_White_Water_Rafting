@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canyoning Adventure | Kithulgala Water Adventures</title>
+    <meta name="description"
+        content="Experience thrilling canyoning in Kithulgala with expert guides. Rappel down waterfalls, jump into natural pools, and slide through rock formations in Sri Lanka's beautiful canyons.">
+    <meta name="keywords"
+        content="Kithulgala canyoning, waterfall rappelling Sri Lanka, adventure tours, water sports, Kelani River canyon">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://example.com/images/favicon.ico" type="image/x-icon">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="chatbot.js"></script>
+
+    <link rel="stylesheet" href="travel_css.css">
+    <style>
+        /* Price List Section */
+        .price {
+            margin-left: 8px;
+            /* or any spacing you prefer */
+        }
+
+        .price-list-section {
+            background-color: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(193, 154, 107, 0.3);
+            margin: 2rem 0;
+        }
+
+        .price-list-section h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .price-list-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+
+        .price-table th {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem;
+            text-align: left;
+        }
+
+        .price-table td {
+            padding: 0.8rem;
+            border-bottom: 1px solid rgba(10, 26, 74, 0.1);
+        }
+
+        .price-table tr:nth-child(even) {
+            background-color: rgba(10, 26, 74, 0.03);
+        }
+
+        .price-table tr:hover {
+            background-color: rgba(10, 26, 74, 0.05);
+        }
+
+        .price-currency {
+            color: var(--gold);
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="https://example.com/videos/canyoning-waterfall.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Kithulgala Water Rafting Logo" style="height: 50px;margin-left: -45px;">
+            </a>
+            <span class="nav_topic" style="margin-left: -1px;">Kithulgala Water Rafting </span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home page.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home page.html #about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="activity.html">Activities</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Go Mart
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="shopping mart.html">All Products</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="shopping mart.html">Biscuits</a></li>
+                            <li><a class="dropdown-item" href="shopping mart.html">Beverages</a></li>
+                            <li><a class="dropdown-item" href="shopping mart.html">Bath Items</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home page.html #contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn gold-outline rounded-pill px-4" href="cart.html">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Booking Steps -->
+    <div class="booking-steps">
+        <div class="step-icons">
+            <div class="step-icon active">
+                <div class="icon-container">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <span class="step-title">TRAVEL DATE</span>
+            </div>
+            <div class="step-line active"></div>
+            <div class="step-icon">
+                <div class="icon-container">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <span class="step-title">CART</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-icon">
+                <div class="icon-container">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <span class="step-title">BOOKING INFO</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-icon">
+                <div class="icon-container">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <span class="step-title">PAYMENT</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="row">
+            <!-- Package Details -->
+            <div class="col-lg-8">
+                <div class="package-container">
+                    <!-- Carousel -->
+                    <div id="packageCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Indicators/dots -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#packageCarousel" data-bs-slide-to="0"
+                                class="active"></button>
+                            <button type="button" data-bs-target="#packageCarousel" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#packageCarousel" data-bs-slide-to="2"></button>
+                        </div>
+
+                        <!-- The slideshow/carousel -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/ca1.jpg" alt="Canyoning Adventure" class="d-block w-100">
+                                <div class="carousel-caption">
+                                    <h3>Canyoning Adventure</h3>
+                                    <p>Descend waterfalls, jump into pools, and slide through natural rock formations
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/ca4.jpg" alt="Professional Canyoning Guides" class="d-block w-100">
+                                <div class="carousel-caption">
+                                    <h3>Expert Guidance</h3>
+                                    <p>Our certified guides ensure your safety while maximizing the adventure</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/ca3.jpg" alt="Beautiful Waterfalls of Kithulgala"
+                                    class="d-block w-100">
+                                <div class="carousel-caption">
+                                    <h3>Stunning Waterfalls</h3>
+                                    <p>Experience Kithulgala's hidden canyons and pristine waterfalls</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls/icons -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#packageCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#packageCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
+                    <div class="package-details">
+                        <h1 class="package-title">CANYONING ADVENTURE <span class="availability-badge">Available
+                                Now</span></h1>
+                        <p class="package-description">
+                            Experience the thrill of canyoning in Kithulgala's spectacular waterfalls and canyons. This
+                            full-day adventure combines rappelling down waterfalls, jumping into crystal-clear pools,
+                            sliding through natural rock formations, and swimming through pristine jungle streams. Our
+                            professional guides will lead you through this exhilarating journey while ensuring your
+                            safety at every step. No prior experience is needed - we provide all necessary training and
+                            equipment.
+                        </p>
+
+                        <div class="package-highlights">
+                            <h4>Adventure Highlights</h4>
+                            <ul>
+                                <li>Rappel down 5-15 meter waterfalls with expert guidance</li>
+                                <li>Jump into deep natural pools from various heights (optional)</li>
+                                <li>Slide through smooth rock formations into crystal-clear water</li>
+                                <li>Swim through jungle streams surrounded by lush vegetation</li>
+                                <li>Explore hidden canyons only accessible through this activity</li>
+                                <li>Small group sizes for personalized attention (max 6 per guide)</li>
+                            </ul>
+                        </div>
+
+                        <p class="package-description">
+                            Our canyoning adventure begins with a safety briefing and equipment fitting at our base
+                            camp. After a short jungle trek to the canyon entrance, you'll receive hands-on training in
+                            rappelling techniques before tackling your first waterfall. Throughout the journey, our
+                            guides will assist you at every obstacle, offering encouragement and ensuring you feel
+                            comfortable with each challenge. The route includes multiple waterfalls of varying heights,
+                            natural water slides, and optional jumps for those seeking extra adrenaline.
+                        </p>
+
+                        <p class="package-description">
+                            We provide all necessary technical equipment including helmets, harnesses, wetsuits (when
+                            needed), and specialized canyoning shoes. Our guides are certified in wilderness first aid
+                            and canyon rescue techniques. The adventure concludes with a refreshing swim in a natural
+                            pool and a scenic hike back to our base camp, where you can relax and share stories of your
+                            adventure.
+                        </p>
+
+                        <!-- Price List Section -->
+                        <div class="price-list-section">
+                            <h4>Our Pricing</h4>
+                            <p>We offer competitive pricing for both local and foreign tourists. All prices include
+                                equipment rental, professional guides, and safety gear.</p>
+
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Half-Day (LKR / USD)</th>
+                                        <th>Full-Day (LKR / USD)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Local Child (Age 12-15)</td>
+                                        <td><span class="price-currency">Rs</span> 7,500</td>
+                                        <td><span class="price-currency">Rs</span> 12,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Local Adult (Age 16+)</td>
+                                        <td><span class="price-currency">Rs</span> 10,000</td>
+                                        <td><span class="price-currency">Rs</span> 15,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Foreign Child (Age 12-15)</td>
+                                        <td><span class="price-currency">$</span> 45</td>
+                                        <td><span class="price-currency">$</span> 65</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Foreign Adult (Age 16+)</td>
+                                        <td><span class="price-currency">$</span> 60</td>
+                                        <td><span class="price-currency">$</span> 90</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="mt-3">
+                                <p><strong>Notes:</strong></p>
+                                <ul>
+                                    <li>Local rates apply to Sri Lankan citizens and residents with valid ID</li>
+                                    <li>Foreign rates apply to all international visitors</li>
+                                    <li>Group discounts available for 6+ participants (10% off)</li>
+                                    <li>Prices include all safety equipment and professional guides</li>
+                                    <li>Photography service available for Rs 2,500 / $20 extra</li>
+                                    <li>Minimum age: 12 years (with parental consent for under 18)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="included-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <strong>Duration</strong>
+                                    <span>4-6 hours (including training)</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <strong>Group Size</strong>
+                                    <span>Max 6 per guide</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-mountain"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <strong>Difficulty</strong>
+                                    <span>Moderate (suitable for beginners)</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <strong>Availability</strong>
+                                    <span>Year-round (best Nov-Apr)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="safety-section">
+                            <h4><i class="fas fa-shield-alt"></i> Safety Information</h4>
+                            <p>Safety is our top priority. All participants receive comprehensive safety training before
+                                entering the canyon. Our guides are certified in first aid and canyon rescue. We provide
+                                high-quality safety equipment including helmets, harnesses, and wetsuits when needed.
+                                Minimum age is 12 years. Participants must be comfortable in water and able to swim. We
+                                assess water conditions daily and adjust routes accordingly. All jumps are optional -
+                                there are always alternative routes for those who prefer not to jump.
+                            </p>
+                        </div>
+
+                        <h3>What to Bring</h3>
+                        <ul>
+                            <li>Swimwear (worn under wetsuit)</li>
+                            <li>Secure footwear that can get wet (we provide canyoning shoes)</li>
+                            <li>Sun protection (hat, sunscreen - waterproof recommended)</li>
+                            <li>Change of clothes and towel</li>
+                            <li>Waterproof camera (optional - we provide secure storage)</li>
+                            <li>Water bottle (we provide refills)</li>
+                            <li>Energy snacks (optional)</li>
+                        </ul>
+
+                        <div class="testimonials">
+                            <h3>What Our Adventurers Say</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-text">
+                                            "The most thrilling experience of my Sri Lanka trip! The guides were
+                                            incredibly professional and made us feel safe while pushing our limits.
+                                            Rappelling down waterfalls was terrifying at first but so rewarding. The
+                                            natural water slides were pure joy. Can't recommend this enough for
+                                            adventure seekers!"
+                                        </div>
+                                        <div class="testimonial-author">
+                                            <img src="images/4ma.jpg" alt="James T." class="author-avatar">
+                                            <div class="author-info">
+                                                <strong>James T.</strong>
+                                                <span>London, UK</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-text">
+                                            "As someone afraid of heights, I was nervous but the guides were so
+                                            supportive and patient. They helped me overcome my fears step by step. By
+                                            the end, I was rappelling down 15m waterfalls with confidence! The scenery
+                                            was breathtaking and the whole experience was perfectly organized. Worth
+                                            every rupee!"
+                                        </div>
+                                        <div class="testimonial-author">
+                                            <img src="images/4fe.jpg" alt="Priya K." class="author-avatar">
+                                            <div class="author-info">
+                                                <strong>Priya K.</strong>
+                                                <span>Colombo, Sri Lanka</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-section">
+                            <h3>Frequently Asked Questions</h3>
+                            <div class="accordion" id="faqAccordion">
+                                <div class="faq-item">
+                                    <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq1"
+                                        aria-expanded="false">
+                                        Do I need prior experience?
+
+                                    </div>
+                                    <div id="faq1" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                                        No prior experience is needed for our canyoning adventures. We start with
+                                        comprehensive training on basic techniques and progress gradually. Our routes
+                                        are designed to accommodate beginners while still offering challenges for more
+                                        adventurous participants. All activities are supervised by our professional
+                                        guides.
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq2"
+                                        aria-expanded="false">
+                                        Is canyoning dangerous?
+
+                                    </div>
+                                    <div id="faq2" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                                        While canyoning involves inherent risks like any adventure sport, we minimize
+                                        these through professional guidance, top-quality equipment, and careful route
+                                        selection. Our guides are trained in rescue techniques and first aid. We assess
+                                        each participant's ability and adjust the route accordingly. All jumps are
+                                        optional, and there are always alternative routes for obstacles you're not
+                                        comfortable with.
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq3"
+                                        aria-expanded="false">
+                                        What if I can't swim?
+
+                                    </div>
+                                    <div id="faq3" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                                        Basic swimming ability is required for safety reasons. You'll be wearing a life
+                                        jacket at all times in the water, but you should be comfortable in water and
+                                        able to swim short distances. If you're not a strong swimmer, please inform your
+                                        guide so they can provide additional flotation devices and choose appropriate
+                                        routes.
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq4"
+                                        aria-expanded="false">
+                                        What happens in case of bad weather?
+
+                                    </div>
+                                    <div id="faq4" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                                        We monitor weather conditions closely. Light rain usually doesn't affect the
+                                        activity, but in case of heavy rain or thunderstorms, we may postpone or cancel
+                                        for safety reasons. You'll be offered an alternative date or full refund. We
+                                        make these decisions based on professional assessment of water levels and
+                                        weather patterns.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Form Column -->
+            <div class="col-lg-4">
+                <div class="booking-form-container">
+                    <div class="booking-form">
+                        <h3 class="form-title">BOOK YOUR ADVENTURE</h3>
+                        <div class="price-display">FROM <span class="price">Rs 7,500 ($45)</span></div>
+
+                        <!-- Tourist Type -->
+                        <div class="mb-3">
+                            <label for="tourist-type" class="form-label"><i class="fas fa-passport"></i> Tourist
+                                Type:</label>
+                            <select id="tourist-type" class="form-select form-control" onchange="updatePrices()">
+                                <option value="local">Local (Sri Lankan)</option>
+                                <option value="foreign">Foreign Tourist</option>
+                            </select>
+                        </div>
+
+                        <!-- Travel Date -->
+                        <div class="mb-3">
+                            <label for="travel-date" class="form-label"><i class="fas fa-calendar-day"></i> Select
+                                Travel
+                                Date:</label>
+                            <div class="input-group">
+                                <input type="date" id="travel-date" class="form-control" min="2024-01-01" required>
+                                <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- Session Type -->
+                        <div class="mb-3">
+                            <label for="session-type" class="form-label"><i class="fas fa-clock"></i> Session
+                                Type:</label>
+                            <select id="session-type" class="form-select form-control" onchange="updatePrices()">
+                                <option value="half-day">Half-Day Adventure</option>
+                                <option value="full-day">Full-Day Adventure</option>
+                            </select>
+                        </div>
+
+                        <!-- Travelers -->
+                        <div class="mb-3">
+                            <label class="form-label"><i class="fas fa-users"></i> Number of Travelers:</label>
+
+                            <div class="traveler-count">
+                                <label for="childCount">Child (age 8-12)</label>
+                                <input type="number" class="form-control traveler-input" id="childCount" min="0"
+                                    value="0" onchange="updateTotalTravelers()">
+                            </div>
+
+
+                            <div class="traveler-count">
+                                <label for="adultCount">Adult (age 13+)</label>
+                                <input type="number" class="form-control traveler-input" id="adultCount" min="0"
+                                    value="0" onchange="updateTotalTravelers()">
+                            </div>
+                        </div>
+
+                        <!-- Total Travelers -->
+                        <div class="total-travelers">
+                            <span>Total Travelers:</span>
+                            <span id="totalTravelers">0</span>
+                        </div>
+
+                        <!-- Total Price -->
+                        <div class="total-travelers">
+                            <span>Estimated Total:</span>
+                            <span class="total-price" id="totalPrice">Rs 0</span>
+                        </div>
+
+                        <!-- Guarantee Badge -->
+                        <div class="guarantee-badge">
+                            <i class="fas fa-lock"></i>
+                            Secure Booking & Best Price Guarantee
+                        </div>
+
+                        <!-- Buttons -->
+                        <button class="btn-add-to-cart" onclick="addToCart()">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="btn-clear" onclick="clearForm()">
+                            <i class="fas fa-eraser"></i> Clear Selection
+                        </button>
+
+                        <!-- Quick Info -->
+                        <div class="mt-3">
+                            <p class="small text-muted"><i class="fas fa-info-circle text-primary"></i> Free
+                                cancellation up to 24
+                                hours before activity</p>
+                            <p class="small text-muted"><i class="fas fa-phone-alt text-primary"></i> Need help? Call
+                                +94 76 123 4567
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Why Choose Us - Moved below the booking form -->
+                    <div class="why-choose-us mt-4">
+                        <h4>Why Choose Our Canyoning</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Certified canyon
+                                guides</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Top-quality technical
+                                equipment</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> 15+ years of guiding
+                                experience</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Best canyons in Sri
+                                Lanka</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Small guide-to-client
+                                ratio</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Progressive challenge
+                                levels</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div id="chatbot-icon" onclick="toggleChat()">
+        <img src="images/asit.png" alt="Chat with us">
+    </div>
+
+    <div id="chatbot">
+        <div class="chat-header">
+            <img src="images/asit.png" alt="Assistant" class="chat-header-icon">
+            <span>Adventure Assistant</span>
+            <button class="close-btn" onclick="toggleChat()">×</button>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="message bot-message">
+                Hello! I'm your adventure assistant. Ask me about our rafting, canyoning, trekking packages or anything
+                else! 😊
+                <div class="quick-buttons">
+                    <button class="quick-btn" onclick="sendQuickMessage('Packages')">Packages</button>
+                    <button class="quick-btn" onclick="sendQuickMessage('Prices')">Prices</button>
+                    <button class="quick-btn" onclick="sendQuickMessage('Safety')">Safety</button>
+                    <button class="quick-btn" onclick="sendQuickMessage('Booking')">Booking</button>
+                </div>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="user-input" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div id="chatbot-icon" onclick="toggleChat()">
+        <img src="images/asit.png" alt="Chat with us">
+    </div>
+
+    <div id="chatbot">
+        <div class="chat-header">
+            <img src="images/asit.png" alt="Assistant" class="chat-header-icon">
+            <span>Adventure Assistant</span>
+            <button class="close-btn" onclick="toggleChat()">×</button>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="message bot-message">
+                Hello! I'm your adventure assistant. Ask me about our rafting, canyoning, trekking packages or anything
+                else! 😊
+                <div class="quick-buttons">
+                    <button class="quick-btn" onclick="sendQuickMessage('Packages')">Packages</button>
+                    <button class="quick-btn" onclick="sendQuickMessage('Prices')">Prices</button>
+                    <button class="quick-btn" onclick="sendQuickMessage('Safety')">Safety</button>
+                    <button class="quick-btn" onclick="sendQuickMessage('Booking')">Booking</button>
+                </div>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="user-input" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <img src="images/logo.png" alt="Logo" class="footer-logo">
+                    <p>Providing thrilling water adventures in Kithulgala since 2005. Safety and fun are our top
+                        priorities.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Activities</h5>
+                    <ul>
+                        <li><a href="kayaking.html">White Water Kayaking</a></li>
+                        <li><a href="rafting.html">White Water Rafting</a></li>
+                        <li><a href="canyoning.html">Canyoning</a></li>
+                        <li><a href="trekking.html">Jungle Trekking</a></li>
+                        <li><a href="camping.html">Camping</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Contact Us</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Kithulgala, Sri Lanka</li>
+                        <li><i class="fas fa-phone me-2"></i> +94 76 123 4567</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@kithulgalarafting.com</li>
+                    </ul>
+                    <div class="subscription-box mt-3" style="display: flex;height: 60px;">
+                        <input type="email" class="form-control" placeholder="Your email"
+                            style="border-radius: 5px 0 0 5px;">
+                        <button class="btn btn-booking"
+                            style="color: #fffaff; background-color: #d4af37; border-radius: 0 5px 5px 0;height: 43px;">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kithulgala Water Adventures. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Add to Cart Modal -->
+    <div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 15px; overflow: hidden;">
+                <div class="modal-header"
+                    style="background-color: var(--primary); border-bottom: 2px solid var(--gold);">
+                    <h5 class="modal-title text-white" id="addToCartModalLabel">Add Adventure Essentials</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-shopping-basket" style="font-size: 3rem; color: var(--gold);"></i>
+                        <h4 class="mt-3" style="color: var(--primary);">Your Rafting Adventure is Added!</h4>
+                        <p class="text-muted">Would you like to add adventure essentials from our Go Mart?</p>
+                    </div>
+
+                    <div class="package-summary mb-4 p-3"
+                        style="background-color: rgba(10, 26, 74, 0.05); border-radius: 10px; border-left: 3px solid var(--gold);">
+                        <div class="d-flex align-items-center">
+                            <img src="images/ca1.jpg" alt="White Water Rafting"
+                                style="width: 80px; height: 60px; object-fit: cover; border-radius: 5px;">
+                            <div class="ms-3">
+                                <h6 style="color: var(--primary); margin-bottom: 0;">CANYONING ADVENTURE</h6>
+                                <small class="text-muted" id="modalPackageDetails">Basic Course - 3 major rapids</small>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <span>Total:</span>
+                            <strong id="modalPackagePrice">Rs 7,500</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"
+                    style="border-top: none; background-color: #f8f9fa; border-radius: 0 0 15px 15px;">
+                    <button type="button" class="btn btn-outline-secondary" style="border-radius: 8px;"
+                        data-bs-dismiss="modal" id="continueToCheckout">
+                        Continue to Checkout
+                    </button>
+                    <button type="button" class="btn btn-booking"
+                        style="border-radius: 8px; background-color: var(--gold);" id="goToMart">
+                        <i class="fas fa-store me-2"></i> Visit Go Mart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Price structure for canyoning
+        const canyoningPrices = {
+            local: {
+                'half-day': { child: 7500, adult: 10000 },
+                'full-day': { child: 12000, adult: 15000 }
+            },
+            foreign: {
+                'half-day': { child: 45, adult: 60 },
+                'full-day': { child: 65, adult: 90 }
+            }
+        };
+
+        // Main function to update traveler count and pricing
+        function updateTotalTravelers() {
+            // Get all input values
+            const touristType = document.getElementById("tourist-type").value;
+            const sessionType = document.getElementById("session-type").value;
+            const childCount = parseInt(document.getElementById("childCount").value) || 0;
+            const adultCount = parseInt(document.getElementById("adultCount").value) || 0;
+            const totalTravelers = childCount + adultCount;
+
+            // Calculate total price
+            const totalPrice =
+                (childCount * canyoningPrices[touristType][sessionType].child) +
+                (adultCount * canyoningPrices[touristType][sessionType].adult);
+
+            // Update the display
+            document.getElementById("totalTravelers").textContent = totalTravelers;
+
+            // Format price display based on tourist type
+            const currencySymbol = touristType === 'local' ? 'Rs ' : '$';
+            document.getElementById("totalPrice").textContent = currencySymbol + totalPrice.toLocaleString();
+        }
+
+        // Called when tourist type or session type changes
+        function updatePrices() {
+            updateTotalTravelers();
+        }
+
+        // Clear the entire form
+        function clearForm() {
+            document.getElementById("travel-date").value = "";
+            document.getElementById("tourist-type").value = "local";
+            document.getElementById("session-type").value = "half-day";
+            document.getElementById("childCount").value = "0";
+            document.getElementById("adultCount").value = "0";
+            updateTotalTravelers();
+        }
+
+        // Add to cart functionality
+        function addToCart() {
+            const date = document.getElementById("travel-date").value;
+            if (!date) {
+                alert("Please select a travel date");
+                return;
+            }
+
+            const totalTravelers = parseInt(document.getElementById("totalTravelers").textContent);
+            if (totalTravelers === 0) {
+                alert("Please add at least one traveler");
+                return;
+            }
+
+            // Get package details
+            const touristType = document.getElementById("tourist-type").value;
+            const sessionType = document.getElementById("session-type").value;
+            const packageName = "CANYONING ADVENTURE";
+            const packageDescription = sessionType === "half-day" ?
+                "Half-Day Adventure" : "Full-Day Adventure";
+            const packagePrice = document.getElementById("totalPrice").textContent;
+            const packageImage = "images/ca1.jpg";
+
+            // Save package to localStorage
+            const packageDetails = {
+                name: packageName,
+                description: packageDescription,
+                price: packagePrice,
+                image: packageImage,
+                date: date,
+                travelers: totalTravelers,
+                session: sessionType,
+                touristType: touristType,
+                type: "canyoning-package"
+            };
+
+            localStorage.setItem('currentPackage', JSON.stringify(packageDetails));
+
+            // Update modal content
+            document.getElementById("modalPackageDetails").textContent = packageDescription;
+            document.getElementById("modalPackagePrice").textContent = packagePrice;
+
+            // Show modal
+            var modal = new bootstrap.Modal(document.getElementById('addToCartModal'));
+            modal.show();
+        }
+
+        // Chatbot functions
+        function toggleChat() {
+            const chatbot = document.getElementById("chatbot");
+            chatbot.style.display = chatbot.style.display === "block" ? "none" : "block";
+        }
+
+        function sendMessage() {
+            const userInput = document.getElementById("user-input");
+            if (userInput.value.trim() !== "") {
+                // Add user message to chat
+                addMessageToChat(userInput.value, 'user');
+
+                // Process message and generate bot response
+                const botResponse = generateBotResponse(userInput.value);
+                addMessageToChat(botResponse, 'bot');
+
+                userInput.value = "";
+            }
+        }
+
+        function sendQuickMessage(msg) {
+            document.getElementById("user-input").value = msg;
+            sendMessage();
+        }
+
+        function handleKeyPress(e) {
+            if (e.key === "Enter") {
+                sendMessage();
+            }
+        }
+
+        function addMessageToChat(message, sender) {
+            const chatBody = document.getElementById("chat-body");
+            const messageDiv = document.createElement("div");
+            messageDiv.className = `message ${sender}-message`;
+            messageDiv.textContent = message;
+            chatBody.appendChild(messageDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        function generateBotResponse(message) {
+            // Simple response logic - can be expanded
+            const lowerMsg = message.toLowerCase();
+
+            if (lowerMsg.includes('price') || lowerMsg.includes('cost')) {
+                return "Our canyoning prices start from Rs 7,500 for locals and $45 for foreigners. You can see all pricing details on the booking page.";
+            } else if (lowerMsg.includes('safety') || lowerMsg.includes('danger')) {
+                return "Safety is our top priority! We use top-quality equipment and our guides are certified in first aid and canyon rescue. All activities include thorough safety briefings.";
+            } else if (lowerMsg.includes('book') || lowerMsg.includes('reserve')) {
+                return "You can book directly on this page by selecting your date and number of travelers. Need help? Call us at +94 76 123 4567.";
+            } else if (lowerMsg.includes('time') || lowerMsg.includes('duration')) {
+                return "The canyoning adventure takes 4-6 hours including training. Half-day sessions are about 4 hours, full-day about 6 hours.";
+            } else {
+                return "Thanks for your message! For more specific information about canyoning, please ask about prices, safety, or booking. Or call us at +94 76 123 4567.";
+            }
+        }
+
+        // Initialize when page loads
+        document.addEventListener("DOMContentLoaded", function () {
+            // Set initial values
+            updateTotalTravelers();
+
+            // Set minimum date to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById("travel-date").min = today;
+
+            // Set up event listeners
+            document.getElementById("tourist-type").addEventListener("change", updateTotalTravelers);
+            document.getElementById("session-type").addEventListener("change", updateTotalTravelers);
+            document.getElementById("childCount").addEventListener("change", updateTotalTravelers);
+            document.getElementById("adultCount").addEventListener("change", updateTotalTravelers);
+            document.getElementById("childCount").addEventListener("input", updateTotalTravelers);
+            document.getElementById("adultCount").addEventListener("input", updateTotalTravelers);
+
+            // Set up modal button events
+            document.getElementById("continueToCheckout").addEventListener('click', function () {
+                window.location.href = "cart.html";
+            });
+
+            document.getElementById("goToMart").addEventListener('click', function () {
+                window.location.href = "shopping mart.html";
+            });
+
+            // Navbar scroll effect
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 50) {
+                    document.querySelector(".navbar").classList.add("scrolled");
+                } else {
+                    document.querySelector(".navbar").classList.remove("scrolled");
+                }
+            });
+        });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
